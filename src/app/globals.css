@@ -1,0 +1,241 @@
+@import "tailwindcss";
+
+/* Tailwind's automatic content scanner reads every non-ignored project file
+   looking for class-name-shaped text, including inside comments and prose —
+   not just source code. Markdown docs in this repo deliberately quote
+   utility class names (e.g. `duration-[var(--duration-cinematic)]`) and
+   describe token groups with a wildcard shorthand (`--duration-*`), which
+   the scanner can misread as a literal arbitrary-value utility candidate and
+   fail to generate. Docs aren't a real content source, so they're excluded. */
+@source not "../../*.md";
+@source not "../../docs/**/*";
+
+/**
+ * THE DEVELOPER — design tokens.
+ * Single-theme (dark) product by deliberate product decision — see plan's
+ * "Open Items" note. No light-mode branch: tokens are defined once here.
+ */
+:root {
+  /* Surfaces — layered near-black */
+  --color-bg: #060509;
+  --color-bg-elevated: #0d0c14;
+  --color-bg-overlay: #15131f;
+  --color-border: #221f2e;
+  --color-border-strong: #332e47;
+
+  /* Text */
+  --color-text-primary: #f6f5fa;
+  --color-text-secondary: #a9a6bf;
+  --color-text-muted: #7a7893; /* 4.78:1 on --color-bg — WCAG AA for normal text */
+
+  /* Violet accent scale — aliased to Tailwind's built-in violet (oklch) for perceptual uniformity */
+  --color-accent-100: var(--color-violet-100);
+  --color-accent-300: var(--color-violet-300);
+  --color-accent-400: var(--color-violet-400);
+  --color-accent-500: var(--color-violet-500);
+  --color-accent-600: var(--color-violet-600);
+  --color-accent-700: var(--color-violet-700);
+  --color-accent-glow: color-mix(in srgb, var(--color-accent-500) 35%, transparent);
+
+  /* Motion — see src/lib/motion/tokens.ts (kept in sync by hand) */
+  --duration-micro: 150ms;
+  --duration-fast: 150ms;
+  --duration-base: 300ms;
+  --duration-normal: 400ms;
+  --duration-slow: 700ms;
+  --duration-cinematic: 1000ms;
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-entrance: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-exit: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-emphasis: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@theme inline {
+  /* Map tokens into Tailwind utilities: bg-*, text-*, border-* etc. */
+  --color-bg: var(--color-bg);
+  --color-bg-elevated: var(--color-bg-elevated);
+  --color-bg-overlay: var(--color-bg-overlay);
+  --color-border: var(--color-border);
+  --color-border-strong: var(--color-border-strong);
+
+  --color-text-primary: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-text-muted: var(--color-text-muted);
+
+  --color-accent-100: var(--color-accent-100);
+  --color-accent-300: var(--color-accent-300);
+  --color-accent-400: var(--color-accent-400);
+  --color-accent-500: var(--color-accent-500);
+  --color-accent-600: var(--color-accent-600);
+  --color-accent-700: var(--color-accent-700);
+
+  --font-display: var(--font-space-grotesk);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+
+  /* Fluid type scale — overrides Tailwind defaults for a cinematic range */
+  --text-2xl: clamp(1.5rem, 1.35rem + 0.75vw, 1.875rem);
+  --text-2xl--line-height: 1.25;
+  --text-3xl: clamp(1.875rem, 1.6rem + 1.4vw, 2.5rem);
+  --text-3xl--line-height: 1.2;
+  --text-4xl: clamp(2.25rem, 1.75rem + 2.5vw, 3.5rem);
+  --text-4xl--line-height: 1.1;
+  --text-5xl: clamp(3rem, 2.15rem + 4vw, 5rem);
+  --text-5xl--line-height: 1.05;
+  --text-6xl: clamp(3.75rem, 2.5rem + 6vw, 7.5rem);
+  --text-6xl--line-height: 1;
+  /* Architectural display scale — reserved for one headline per page (Hero,
+     page-index titles). Not for routine section headings. Min bound is sized
+     for an 8-9 letter word (e.g. "DEVELOPER") to fit a 320px viewport without
+     horizontal overflow. */
+  --text-7xl: clamp(2.75rem, 1rem + 8vw, 10rem);
+  --text-7xl--line-height: 0.95;
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+
+  --ease-standard: var(--ease-standard);
+  --ease-entrance: var(--ease-entrance);
+  --ease-exit: var(--ease-exit);
+  --ease-emphasis: var(--ease-emphasis);
+}
+
+/*
+ * --duration-* has no Tailwind v4 theme namespace (duration-* utilities take
+ * raw ms values). The tokens above stay as plain CSS vars, consumed via
+ * arbitrary values (duration-[var(--duration-cinematic)]) or from
+ * src/lib/motion/tokens.ts for Framer Motion.
+ */
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-text-primary);
+    /* Defense-in-depth against stray sub-pixel overflow at odd breakpoints
+       (clip, not hidden, so it doesn't disturb position:sticky headers). */
+    overflow-x: clip;
+  }
+
+  ::selection {
+    background: var(--color-accent-600);
+    color: var(--color-text-primary);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent-400);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  /* Faint structural grid — one hairline every 56px. Used as a background
+     layer only; always paired with a low opacity wrapper so it stays
+     subordinate to content (see decorative/* components). */
+  .bg-grid-technical {
+    background-image:
+      linear-gradient(to right, var(--color-border) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--color-border) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  @keyframes orbit-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Very slow — reads as "alive", not animated. Disabled globally under
+     prefers-reduced-motion via the base-layer rule above. */
+  .animate-orbit-slow {
+    animation: orbit-spin 140s linear infinite;
+  }
+
+  .animate-orbit-slow-reverse {
+    animation: orbit-spin 100s linear infinite reverse;
+  }
+
+  @keyframes glow-drift {
+    0%,
+    100% {
+      transform: translate(33%, -50%) scale(1);
+      opacity: 0.7;
+    }
+    50% {
+      transform: translate(30%, -47%) scale(1.06);
+      opacity: 1;
+    }
+  }
+
+  /* Reads as "something is alive back there," not as a moving object —
+     18s round trip, a few percent of scale/position. */
+  .animate-glow-drift {
+    animation: glow-drift 18s ease-in-out infinite;
+  }
+
+  @keyframes node-pulse {
+    0%,
+    100% {
+      opacity: 0.45;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  .animate-node-pulse {
+    animation: node-pulse 5s ease-in-out infinite;
+  }
+
+  @keyframes trailer-camera {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.08);
+    }
+  }
+
+  @keyframes trailer-camera-slow {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.04);
+    }
+  }
+
+  /* A single, slow push-in for the trailer's full ~19s runtime — plays once
+     and holds (no loop), so it reads as one camera move, not a UI animation.
+     Two speeds on two layers is the whole "parallax" — cheap, transform-only.
+     Keep this in sync with the sum of trailerScenes[].holdMs in
+     src/content/trailer.ts if the trailer's total duration changes. */
+  .animate-trailer-camera {
+    animation: trailer-camera 19s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-trailer-camera-slow {
+    animation: trailer-camera-slow 19s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+}
