@@ -11,6 +11,7 @@ import { about } from "@/content/about";
 import { education } from "@/content/education";
 import { projects } from "@/content/projects";
 import { site } from "@/content/site";
+import Image from "next/image";
 
 /**
  * About is the site's human counterpoint to the systems/technical pages —
@@ -68,7 +69,13 @@ export default function AboutPage() {
                 role="img"
                 aria-label="Photo placeholder"
               >
-                <span className="text-text-muted font-mono text-xs">Photo</span>
+                <Image
+                  src="/harshit.jpg"
+                  alt="Harshit Teotia"
+                  width={1200}
+                  height={1200}
+                  className="h-full w-full object-cover"
+                />
               </div>
             </div>
           )}
