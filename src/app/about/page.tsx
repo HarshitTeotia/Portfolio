@@ -11,7 +11,6 @@ import { about } from "@/content/about";
 import { education } from "@/content/education";
 import { projects } from "@/content/projects";
 import { site } from "@/content/site";
-import Image from "next/image";
 
 /**
  * About is the site's human counterpoint to the systems/technical pages —
