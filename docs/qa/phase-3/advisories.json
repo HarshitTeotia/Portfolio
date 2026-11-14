@@ -1,0 +1,272 @@
+[
+  {
+    "id": "GHSA-vcvr-r3jv-pc5j",
+    "cve": null,
+    "url": "https://github.com/advisories/GHSA-vcvr-r3jv-pc5j",
+    "summary": "Next.js: Remote Code Execution in next/og ImageResponse",
+    "severity": "critical",
+    "reviewed": "2026-09-30T14:48:30Z",
+    "vulnerabilities": [
+      {
+        "package": "next",
+        "affected": ">= 16.2.0, < 16.3.6",
+        "patched": "16.3.6"
+      }
+    ]
+  },
+  {
+    "id": "GHSA-cjq9-62q9-8jv4",
+    "cve": "CVE-2026-94483",
+    "url": "https://github.com/advisories/GHSA-cjq9-62q9-8jv4",
+    "summary": "Next.js has Server-Side Request Forgery in Image Optimization",
+    "severity": "high",
+    "reviewed": "2026-10-07T20:30:55Z",
+    "vulnerabilities": [
+      {
+        "package": "next",
+        "affected": ">= 16.0.0, < 16.3.8",
+        "patched": "16.3.8"
+      }
+    ]
+  },
+  {
+    "id": "GHSA-2464-fhr4-w9xw",
+    "cve": null,
+    "url": "https://github.com/advisories/GHSA-2464-fhr4-w9xw",
+    "summary": "Next.js: Unauthenticated Remote Code Execution in Image Optimization API when SVG files are used",
+    "severity": "critical",
+    "reviewed": "2026-10-22T15:52:53Z",
+    "vulnerabilities": [
+      {
+        "package": "next",
+        "affected": ">= 10.0.0, <= 15.5.27",
+        "patched": "15.5.28"
+      },
+      {
+        "package": "next",
+        "affected": ">= 16.0.0, <= 16.4.0",
+        "patched": "16.4.1"
+      }
+    ]
+  },
+  {
+    "id": "GHSA-p3m5-59mp-jv5r",
+    "cve": "CVE-2026-94482",
+    "url": "https://github.com/advisories/GHSA-p3m5-59mp-jv5r",
+    "summary": "Next.js: Denial of Service in App Router using Server Actions",
+    "severity": "high",
+    "reviewed": "2026-10-22T15:50:34Z",
+    "vulnerabilities": [
+      {
+        "package": "next",
+        "affected": ">= 13.0.0, <= 15.5.27",
+        "patched": "15.5.28"
+      },
+      {
+        "package": "next",
+        "affected": ">= 16.0.0, <= 16.4.0",
+        "patched": "16.4.1"
+      }
+    ]
+  },
+  {
+    "id": "GHSA-673q-mjm6-r5xr",
+    "cve": null,
+    "url": "https://github.com/advisories/GHSA-673q-mjm6-r5xr",
+    "summary": "Next.js: Unauthenticated Remote Code Execution in `use cache` functions returning typed arrays",
+    "severity": "critical",
+    "reviewed": "2026-10-22T16:42:31Z",
+    "vulnerabilities": [
+      {
+        "package": "next",
+        "affected": ">= 16.0.0, <= 16.4.0",
+        "patched": "16.4.1"
+      }
+    ]
+  },
+  {
+    "id": "GHSA-wq5f-xc86-pv6w",
+    "cve": null,
+    "url": "https://github.com/advisories/GHSA-wq5f-xc86-pv6w",
+    "summary": "sharp : Vulnerability in librsvg dependency CVE-2026-96889",
+    "severity": "high",
+    "reviewed": "2026-10-06T13:43:57Z",
+    "vulnerabilities": [
+      {
+        "package": "sharp",
+        "affected": "< 0.35.5",
+        "patched": "0.35.5"
+      }
+    ]
+  },
+  {
+    "id": "GHSA-68fv-2mgg-jv7q",
+    "cve": "CVE-2026-93749",
+    "url": "https://github.com/advisories/GHSA-68fv-2mgg-jv7q",
+    "summary": "source-map-js allows event-loop denial of service through indexed source-map section offsets",
+    "severity": "high",
+    "reviewed": "2026-10-05T23:31:22Z",
+    "vulnerabilities": [
+      {
+        "package": "source-map-js",
+        "affected": ">= 1.0.0, < 1.2.2",
+        "patched": "1.2.2"
+      }
+    ]
+  },
+  {
+    "id": "GHSA-xjj6-f33q-929c",
+    "cve": "CVE-2026-109869",
+    "url": "https://github.com/advisories/GHSA-xjj6-f33q-929c",
+    "summary": "undici vulnerable to Denial of Service via unhandled error on excessive content-encodings",
+    "severity": "high",
+    "reviewed": "2026-10-23T22:14:31Z",
+    "vulnerabilities": [
+      {
+        "package": "undici",
+        "affected": ">= 6.23.0, < 6.29.1",
+        "patched": "6.29.1"
+      },
+      {
+        "package": "undici",
+        "affected": ">= 7.18.0, < 7.30.1",
+        "patched": "7.30.1"
+      },
+      {
+        "package": "undici",
+        "affected": ">= 8.0.0, < 8.12.2",
+        "patched": "8.12.2"
+      }
+    ]
+  },
+  {
+    "id": "GHSA-4w7w-5xrc-9h26",
+    "cve": "CVE-2026-109829",
+    "url": "https://github.com/advisories/GHSA-4w7w-5xrc-9h26",
+    "summary": "undici vulnerable to cache poisoning and cross-user disclosure via cross-origin redirects",
+    "severity": "high",
+    "reviewed": "2026-10-27T19:02:31Z",
+    "vulnerabilities": [
+      {
+        "package": "undici",
+        "affected": ">= 7.0.0, < 7.30.1",
+        "patched": "7.30.1"
+      },
+      {
+        "package": "undici",
+        "affected": ">= 8.0.0, < 8.12.2",
+        "patched": "8.12.2"
+      }
+    ]
+  },
+  {
+    "id": "GHSA-2m5v-pch6-74hx",
+    "cve": "CVE-2026-109383",
+    "url": "https://github.com/advisories/GHSA-2m5v-pch6-74hx",
+    "summary": "undici vulnerable to TLS certificate validation bypass via dropped tls options in Agent",
+    "severity": "high",
+    "reviewed": "2026-10-27T19:02:26Z",
+    "vulnerabilities": [
+      {
+        "package": "undici",
+        "affected": ">= 4.0.0, < 6.29.1",
+        "patched": "6.29.1"
+      },
+      {
+        "package": "undici",
+        "affected": ">= 7.0.0, < 7.30.1",
+        "patched": "7.30.1"
+      },
+      {
+        "package": "undici",
+        "affected": ">= 8.0.0, < 8.12.2",
+        "patched": "8.12.2"
+      }
+    ]
+  },
+  {
+    "id": "GHSA-qrxm-fqhp-jwvm",
+    "cve": "CVE-2026-87018",
+    "url": "https://github.com/advisories/GHSA-qrxm-fqhp-jwvm",
+    "summary": "undici vulnerable to Denial of Service via TLS 1.2 certificate-changing renegotiation",
+    "severity": "high",
+    "reviewed": "2026-10-27T19:02:21Z",
+    "vulnerabilities": [
+      {
+        "package": "undici",
+        "affected": ">= 4.2.1, < 6.29.1",
+        "patched": "6.29.1"
+      },
+      {
+        "package": "undici",
+        "affected": ">= 7.0.0, < 7.30.1",
+        "patched": "7.30.1"
+      },
+      {
+        "package": "undici",
+        "affected": ">= 8.0.0, < 8.12.2",
+        "patched": "8.12.2"
+      }
+    ]
+  },
+  {
+    "id": "GHSA-587h-7wmj-h5pm",
+    "cve": "CVE-2026-112942",
+    "url": "https://github.com/advisories/GHSA-587h-7wmj-h5pm",
+    "summary": "launch-editor: `fs.existsSync()` existence check can be bypassed on Windows",
+    "severity": "high",
+    "reviewed": "2026-10-20T19:48:25Z",
+    "vulnerabilities": [
+      {
+        "package": "launch-editor",
+        "affected": "<= 2.14.1",
+        "patched": "2.14.2"
+      },
+      {
+        "package": "vite",
+        "affected": ">= 8.3.0, <= 8.3.2",
+        "patched": "8.3.3"
+      },
+      {
+        "package": "vite",
+        "affected": ">= 8.2.0, <= 8.2.3",
+        "patched": "8.2.4"
+      },
+      {
+        "package": "vite",
+        "affected": ">= 8.0.0, <= 8.1.5",
+        "patched": "8.1.6"
+      },
+      {
+        "package": "vite",
+        "affected": ">= 7.0.0, <= 7.3.6",
+        "patched": "7.3.7"
+      },
+      {
+        "package": "vite",
+        "affected": "<= 6.4.3",
+        "patched": "6.4.4"
+      },
+      {
+        "package": "vite-plus",
+        "affected": "<= 1.0.0",
+        "patched": "1.1.0"
+      }
+    ]
+  },
+  {
+    "id": "GHSA-mrhx-c7xc-m3w5",
+    "cve": "CVE-2023-54404",
+    "url": "https://github.com/advisories/GHSA-mrhx-c7xc-m3w5",
+    "summary": "Zod can exhaust memory while validating oversized constrained collections",
+    "severity": "high",
+    "reviewed": "2026-10-23T18:26:50Z",
+    "vulnerabilities": [
+      {
+        "package": "zod",
+        "affected": "< 4.6.6",
+        "patched": "4.6.6"
+      }
+    ]
+  }
+]

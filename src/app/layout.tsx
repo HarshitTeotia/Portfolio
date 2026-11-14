@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { RouteTransition } from "@/components/motion/RouteTransition";
 import { PersonJsonLd } from "@/components/seo/PersonJsonLd";
 import { siteUrl } from "@/lib/site-url";
+import { site } from "@/content/site";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -25,9 +26,8 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-const title = "THE DEVELOPER — Harshit Teotia";
-const description =
-  "Harshit Teotia — Python / Backend / Full Stack / AI Engineer. A cinematic developer portfolio told as a web series.";
+const title = site.seoTitle;
+const description = site.summary;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -36,11 +36,11 @@ export const metadata: Metadata = {
   openGraph: {
     title,
     description,
-    siteName: "THE DEVELOPER",
+    siteName: site.name,
     type: "website",
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title,
     description,
   },

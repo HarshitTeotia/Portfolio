@@ -1,18 +1,27 @@
+/** Verified professional profile, reviewed November 13, 2026. */
 export const site = {
   name: "Harshit Teotia",
-  /** Small editorial tag — the web-series identity, kept as a secondary
-   * descriptor. The primary identity everywhere is `name`. */
   descriptor: "THE DEVELOPER",
-  eyebrow: "HARSHIT ORIGINAL",
-  tagline:
-    "Building backend systems, intelligent workflows, and products that solve real problems.",
-  /** The name-supporting line in the Hero and the trailer's payoff scene. */
-  identityRoles: ["Python Developer", "Backend Engineer", "AI / Systems"],
+  eyebrow: "Python Backend • Applied AI • LLM Applications",
+  headline: "Python Backend Developer | AI & GenAI Engineer",
+  professionalTitle: "Python Developer",
+  seoTitle: "Harshit Teotia — Python Backend Developer | AI & GenAI Engineer",
+  summary:
+    "Python Developer with 17 months of professional experience building FastAPI backends, REST APIs, AI-powered document workflows, and business applications. Hands-on with Generative AI, LLM integrations, RAG pipelines, Google ADK agents, Qdrant, PostgreSQL, and cross-functional product development.",
+  tagline: "Python backend systems, applied AI, and business software.",
+  availability: "Available for Opportunities",
+  availabilityDetail:
+    "Available to join immediately. Open to remote software engineering and AI engineering opportunities.",
+  location: "Bengaluru, India",
+  identityRoles: ["Python Backend Developer", "AI & GenAI Engineer"],
   positioning: [
     "Python Developer",
     "Backend Developer",
-    "Full Stack Developer",
-    "AI Engineer",
     "Software Development Engineer",
+    "AI/ML Engineer",
+    "Generative AI Engineer",
+    "LLM Application Engineer",
+    "AI Automation / Agentic AI Engineer",
+    "Product Engineer — AI & Backend Systems",
   ],
 } as const;

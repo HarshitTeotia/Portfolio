@@ -1,6 +1,8 @@
 "use client";
 
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { useReducedMotion } from "@/lib/use-reduced-motion";
+
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, type ReactNode } from "react";
 
 interface ParallaxProps {

@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/page-metadata";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/components/ui/SiteLink";
 import type { Variants } from "framer-motion";
 import { SectionHeading } from "@/components/ui";
 import { Reveal } from "@/components/motion/Reveal";
 import { Stagger, StaggerItem } from "@/components/motion/Stagger";
 import { CornerBrackets } from "@/components/decorative";
 import { duration, ease } from "@/lib/motion/tokens";
+import { assetPath } from "@/lib/asset-path";
 import { about } from "@/content/about";
 import { education } from "@/content/education";
 import { projects } from "@/content/projects";
@@ -27,11 +28,11 @@ const photoReveal: Variants = {
   },
 };
 
-export const metadata: Metadata = {
-  title: "About — THE DEVELOPER",
-  description:
-    "Harshit Teotia — backend-focused developer building APIs, AI-powered systems, and data-driven products.",
-};
+export const metadata = pageMetadata(
+  "/about/",
+  "About — Harshit Teotia",
+  "Python Backend Developer and AI & GenAI Engineer with 17 months of professional experience. Based in Bengaluru and available to join immediately."
+);
 
 export default function AboutPage() {
   return (
@@ -53,7 +54,7 @@ export default function AboutPage() {
             <div className="group relative overflow-hidden">
               <CornerBrackets className="scale-105" />
               <Image
-                src={about.photoSrc}
+                src={assetPath(about.photoSrc)}
                 alt={about.photoAlt}
                 width={220}
                 height={220}
@@ -68,13 +69,7 @@ export default function AboutPage() {
                 role="img"
                 aria-label="Photo placeholder"
               >
-                <Image
-                  src="/harshit.jpg"
-                  alt="Harshit Teotia"
-                  width={1200}
-                  height={1200}
-                  className="h-full w-full object-cover"
-                />
+                <span className="text-text-muted">Photo coming soon</span>
               </div>
             </div>
           )}
@@ -140,7 +135,7 @@ export default function AboutPage() {
 
       <Reveal delay={0.1} className="mt-20">
         <h2 className="text-accent-400 font-mono text-xs tracking-[0.2em] uppercase">
-          Currently Building Across
+          Selected Project Contributions
         </h2>
         <div className="mt-5 flex flex-col">
           {projects.map((project) => (

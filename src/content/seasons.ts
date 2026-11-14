@@ -6,7 +6,7 @@ export const seasons: Season[] = [
     code: "S01",
     title: "The Beginning",
     dateRange: "2020–2023",
-    roleOrDegree: "BCA — Computer Science",
+    roleOrDegree: "Bachelor of Computer Applications (BCA)",
     institutionOrCompany: "Meerut Institute of Technology, Meerut",
     story:
       "The foundation. Learning computer science, programming, problem solving, and software fundamentals.",
@@ -25,10 +25,10 @@ export const seasons: Season[] = [
     id: "s03",
     code: "S03",
     title: "The Real World",
-    dateRange: "May 2025 – Present",
+    dateRange: "May 2025 – September 2026",
     roleOrDegree: "Python Developer",
     institutionOrCompany: "Vrozart Group",
     story:
-      "The classroom ended. Real products, real requirements, real users, real systems.",
+      "17 months as a Python Developer at Vrozart Group: backend APIs, applied AI, and operational software.",
   },
 ];

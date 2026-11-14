@@ -1,64 +1,35 @@
-import Link from "next/link";
-import { Badge, Card, SectionHeading } from "@/components/ui";
+import Link from "@/components/ui/SiteLink";
+import { SectionHeading } from "@/components/ui";
 import { Reveal } from "@/components/motion/Reveal";
+import { ProjectCard } from "@/components/projects/ProjectCard";
 import { projects } from "@/content/projects";
-import { getTechnology } from "@/content/technologies";
-import { getProjectPhase } from "@/content/experience";
 
 export function FeaturedWork() {
   return (
-    <section className="mx-auto max-w-5xl px-6 py-20">
-      <Reveal>
+    <section
+      className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20"
+      aria-labelledby="featured-title"
+    >
+      <div id="featured-title">
         <SectionHeading
-          kicker="Case Studies"
-          title="What I've built"
-          description="Four real projects — the clearest evidence of how I work."
+          kicker="Selected work"
+          title="Backend systems. Applied AI. Real workflows."
+          description="Three case studies in lending, distribution, and hospitality operations."
         />
-      </Reveal>
-
-      <div className="mt-10 grid gap-6 sm:grid-cols-2">
-        {projects.map((project, index) => {
-          const projectNumber = String(index + 1).padStart(2, "0");
-          const phase = getProjectPhase(project.id);
-          return (
-            <Reveal key={project.id} delay={index * 0.05}>
-              <Link href={`/projects/${project.slug}`} className="group block h-full">
-                <Card className="flex h-full flex-col">
-                  <Badge
-                    tone="accent"
-                    className="group-hover:border-accent-400 group-hover:bg-accent-600/20 w-fit"
-                  >
-                    Project {projectNumber}
-                  </Badge>
-                  <p className="font-display text-text-primary duration-base ease-standard mt-4 text-xl transition-colors group-hover:text-white">
-                    {project.title}
-                  </p>
-                  <p className="text-accent-300 mt-1 text-sm">{project.positioning}</p>
-                  <p className="text-text-secondary mt-3 text-sm">{project.theme}</p>
-                  <p className="text-text-muted mt-3 font-mono text-[10px] tracking-[0.15em] uppercase">
-                    {phase ? phase.label : "Independent Project"}
-                  </p>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {project.technologies.slice(0, 4).map((techId) => {
-                      const tech = getTechnology(techId);
-                      return tech ? <Badge key={techId}>{tech.name}</Badge> : null;
-                    })}
-                  </div>
-                  <span className="text-text-secondary duration-base ease-standard group-hover:text-accent-300 mt-auto flex items-center gap-2 pt-4 text-sm transition-colors">
-                    View case study
-                    <span
-                      aria-hidden="true"
-                      className="duration-base ease-standard transition-transform group-hover:translate-x-1"
-                    >
-                      →
-                    </span>
-                  </span>
-                </Card>
-              </Link>
-            </Reveal>
-          );
-        })}
       </div>
+      <div className="mt-8 grid items-stretch gap-5 md:grid-cols-2 xl:grid-cols-3">
+        {projects.slice(0, 3).map((project, index) => (
+          <Reveal key={project.id} amount={0.1} delay={index * 0.04} className="h-full">
+            <ProjectCard project={project} index={index} headingLevel="h3" />
+          </Reveal>
+        ))}
+      </div>
+      <Link
+        href="/projects"
+        className="text-accent-300 mt-6 inline-flex min-h-11 items-center rounded-sm text-sm"
+      >
+        Explore all projects, including Viblets →
+      </Link>
     </section>
   );
 }

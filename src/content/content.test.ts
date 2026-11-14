@@ -4,6 +4,9 @@ import { technologies } from "./technologies";
 import { seasons } from "./seasons";
 import { experience } from "./experience";
 import { education } from "./education";
+import { existsSync } from "node:fs";
+import { resolve } from "node:path";
+import { site } from "./site";
 import { socialLinks } from "./social";
 
 /**
@@ -142,6 +145,27 @@ describe("social links", () => {
       if (link.url !== null) {
         expect(link.url.length).toBeGreaterThan(0);
       }
+    }
+  });
+});
+
+describe("November 2026 profile consistency", () => {
+  it("keeps employment closed and consistent with the career timeline", () => {
+    const role = experience.find((entry) => entry.id === "vrozart-group");
+    const season = seasons.find((entry) => entry.id === "s03");
+    expect(role?.current).toBe(false);
+    expect(role?.role).toBe("Python Developer");
+    expect(role?.dateRange).toBe("May 2025 – September 2026");
+    expect(season?.dateRange).toBe(role?.dateRange);
+    expect(site.summary).toContain("17 months");
+  });
+
+  it("keeps actual local assets available and demo links absent until verified", () => {
+    const resume = socialLinks.find((link) => link.id === "resume");
+    expect(resume?.url).toBeTruthy();
+    expect(existsSync(resolve("public", resume!.url!.replace(/^\//, "")))).toBe(true);
+    for (const project of projects) {
+      expect(project.links.demo?.url ?? null).toBeNull();
     }
   });
 });

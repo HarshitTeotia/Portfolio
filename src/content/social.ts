@@ -1,10 +1,6 @@
 import type { SocialLink } from "./types";
 
-/**
- * Email is real and confirmed. GitHub/LinkedIn/Resume are placeholders
- * (`url: null`) until supplied — Contact/Footer render them as disabled
- * or omitted, never as a fabricated link. See src/lib/content.ts.
- */
+/** Verified contact URLs and existing resume file. */
 export const socialLinks: SocialLink[] = [
   { id: "email", label: "Email", url: "mailto:harshitteotia2003@gmail.com" },
   { id: "github", label: "GitHub", url: "https://github.com/HarshitTeotia" },

@@ -1,5 +1,7 @@
 # ANIMATION_SYSTEM.md
 
+> Phase 2 updated intro activation, modal behavior, project presentation, navigation, technology selection, hydration-safe reduced-motion branching, and static-link prefetch behavior. [Phase 2 report](PHASE_2_REPORT.md) and the root [project context](../PROJECT_CONTEXT.md) describe the current implementation; detailed tables below also retain earlier implementation history.
+
 Every animation mechanism in this codebase, verified by reading each file directly. Two motion systems coexist: **JS-driven** (Framer Motion, via the primitives in `src/components/motion/`) and **CSS-only** (keyframes in `src/app/globals.css`, applied via utility classes). Both respect `prefers-reduced-motion`.
 
 ---

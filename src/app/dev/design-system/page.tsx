@@ -1,4 +1,5 @@
 import { Badge, Button, Card, Divider, SectionHeading } from "@/components/ui";
+import { notFound } from "next/navigation";
 
 export const metadata = {
   robots: { index: false, follow: false },
@@ -9,6 +10,7 @@ export const metadata = {
  * Not linked from the public nav.
  */
 export default function DesignSystemPage() {
+  if (process.env.NODE_ENV === "production") notFound();
   return (
     <div className="mx-auto flex max-w-4xl flex-col gap-16 px-6 py-16">
       <SectionHeading

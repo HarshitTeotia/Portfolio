@@ -1,20 +1,12 @@
-/**
- * `photoSrc` is null until a real photo is supplied — the About page
- * renders a neutral placeholder instead of a fabricated or stock image.
- * This is also the ONLY place in the site allowed to render a photo.
- *
- * Every claim below traces to something in projects.ts/experience.ts —
- * this file describes real work, not aspirational skill language.
- */
+/** Existing portrait and verified November 2026 professional background. */
 export const about = {
-  photoSrc: null as string | null,
+  photoSrc: "/harshit.jpg" as string | null,
   photoAlt: "Harshit Teotia",
 
-  heroStatement:
-    "Backend-focused developer building APIs, AI-powered systems, and data-driven products.",
+  heroStatement: "Python Backend Developer | AI & GenAI Engineer",
 
   summary:
-    "I work primarily with Python and FastAPI, building backend systems that connect business workflows, data, APIs, and AI capabilities. My experience spans REST APIs, asynchronous systems, PostgreSQL, authentication, RAG pipelines, agent workflows, document processing, and operational platforms.",
+    "I have 17 months of professional software development experience as a Python Developer at Vrozart Group (May 2025–September 2026), building FastAPI APIs, PostgreSQL-backed business workflows, and applied AI integrations. My work includes document intelligence, RAG, Google ADK agents, React contributions, and collaboration with frontend, QA, and product teams. I am based in Bengaluru, India, available to join immediately, and open to remote software engineering and AI engineering opportunities.",
 
   whatIBuild: [
     {

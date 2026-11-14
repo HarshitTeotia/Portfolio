@@ -1,6 +1,8 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { useReducedMotion } from "@/lib/use-reduced-motion";
+
+import { motion } from "framer-motion";
 import { Badge } from "@/components/ui";
 import { Stagger, StaggerItem } from "@/components/motion/Stagger";
 import { duration, ease } from "@/lib/motion/tokens";
@@ -73,8 +75,8 @@ function CompactFlow({ steps }: { steps: ArchitectureStep[] }) {
   return (
     <div className="flex flex-wrap items-center gap-2">
       {steps.map((step, index) => (
-        <div key={step.label} className="flex items-center gap-2">
-          <span className="border-border-strong bg-bg-elevated text-text-secondary rounded-none border px-3 py-1.5 font-mono text-xs tracking-wide uppercase">
+        <div key={step.label} className="flex max-w-full min-w-0 items-center gap-2">
+          <span className="border-border-strong bg-bg-elevated text-text-secondary max-w-full rounded-none border px-3 py-1.5 font-mono text-xs tracking-wide uppercase">
             {step.label}
           </span>
           {index < steps.length - 1 && (
@@ -113,11 +115,11 @@ export function ArchitectureView({ architecture }: ArchitectureViewProps) {
             {architecture.steps.map((step, index) => (
               <li key={step.label}>
                 <StaggerItem variants={nodeVariant}>
-                  <div className="border-border-strong bg-bg-elevated flex items-start gap-4 border px-5 py-4">
+                  <div className="border-border-strong bg-bg-elevated flex min-w-0 items-start gap-3 rounded-md border px-4 py-4 sm:gap-4 sm:px-5">
                     <span className="text-accent-400 font-mono text-xs">
                       {String(index + 1).padStart(2, "0")}
                     </span>
-                    <div>
+                    <div className="min-w-0">
                       <p className="text-text-primary font-mono text-sm tracking-wide uppercase">
                         {step.label}
                       </p>
@@ -135,7 +137,7 @@ export function ArchitectureView({ architecture }: ArchitectureViewProps) {
           </ol>
         </Stagger>
         {architecture.notes && (
-          <ul className="border-border text-text-muted mt-6 flex flex-col gap-1 border-t pt-4 text-sm">
+          <ul className="border-border text-text-secondary mt-6 flex flex-col gap-1 border-t pt-4 text-sm">
             {architecture.notes.map((note) => (
               <li key={note}>{note}</li>
             ))}
@@ -156,7 +158,7 @@ export function ArchitectureView({ architecture }: ArchitectureViewProps) {
             <CompactFlow steps={architecture.requestFlow} />
           </div>
         )}
-        <Stagger staggerDelay={0.08} amount={0.2} className="grid gap-px sm:grid-cols-2">
+        <Stagger staggerDelay={0.08} amount={0.2} className="grid gap-3 sm:grid-cols-2">
           {architecture.groups.map((group) => (
             <StaggerItem key={group.title} variants={nodeVariant}>
               <div className="border-border-strong h-full border p-5">
@@ -194,11 +196,7 @@ export function ArchitectureView({ architecture }: ArchitectureViewProps) {
           <CompactFlow steps={architecture.requestFlow} />
         </div>
       )}
-      <Stagger
-        staggerDelay={0.06}
-        amount={0.2}
-        className="grid grid-cols-2 gap-px sm:grid-cols-3"
-      >
+      <Stagger staggerDelay={0.06} amount={0.2} className="grid grid-cols-2 gap-3">
         {architecture.metrics.map((metric) => (
           <StaggerItem key={metric.label} variants={nodeVariant}>
             <div className="border-border-strong h-full border p-5">

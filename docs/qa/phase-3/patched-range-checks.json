@@ -1,0 +1,249 @@
+[
+  {
+    "id": "GHSA-vcvr-r3jv-pc5j",
+    "checks": [
+      {
+        "package": "next",
+        "path": "node_modules/next",
+        "version": "16.4.6",
+        "affectedRange": ">= 16.2.0, < 16.3.6",
+        "affected": false
+      }
+    ]
+  },
+  {
+    "id": "GHSA-cjq9-62q9-8jv4",
+    "checks": [
+      {
+        "package": "next",
+        "path": "node_modules/next",
+        "version": "16.4.6",
+        "affectedRange": ">= 16.0.0, < 16.3.8",
+        "affected": false
+      }
+    ]
+  },
+  {
+    "id": "GHSA-2464-fhr4-w9xw",
+    "checks": [
+      {
+        "package": "next",
+        "path": "node_modules/next",
+        "version": "16.4.6",
+        "affectedRange": ">= 10.0.0, <= 15.5.27",
+        "affected": false
+      },
+      {
+        "package": "next",
+        "path": "node_modules/next",
+        "version": "16.4.6",
+        "affectedRange": ">= 16.0.0, <= 16.4.0",
+        "affected": false
+      }
+    ]
+  },
+  {
+    "id": "GHSA-p3m5-59mp-jv5r",
+    "checks": [
+      {
+        "package": "next",
+        "path": "node_modules/next",
+        "version": "16.4.6",
+        "affectedRange": ">= 13.0.0, <= 15.5.27",
+        "affected": false
+      },
+      {
+        "package": "next",
+        "path": "node_modules/next",
+        "version": "16.4.6",
+        "affectedRange": ">= 16.0.0, <= 16.4.0",
+        "affected": false
+      }
+    ]
+  },
+  {
+    "id": "GHSA-673q-mjm6-r5xr",
+    "checks": [
+      {
+        "package": "next",
+        "path": "node_modules/next",
+        "version": "16.4.6",
+        "affectedRange": ">= 16.0.0, <= 16.4.0",
+        "affected": false
+      }
+    ]
+  },
+  {
+    "id": "GHSA-wq5f-xc86-pv6w",
+    "checks": [
+      {
+        "package": "sharp",
+        "path": "node_modules/sharp",
+        "version": "0.35.5",
+        "affectedRange": "< 0.35.5",
+        "affected": false
+      }
+    ]
+  },
+  {
+    "id": "GHSA-68fv-2mgg-jv7q",
+    "checks": [
+      {
+        "package": "source-map-js",
+        "path": "node_modules/source-map-js",
+        "version": "1.2.2",
+        "affectedRange": ">= 1.0.0, < 1.2.2",
+        "affected": false
+      }
+    ]
+  },
+  {
+    "id": "GHSA-xjj6-f33q-929c",
+    "checks": [
+      {
+        "package": "undici",
+        "path": "node_modules/undici",
+        "version": "7.30.2",
+        "affectedRange": ">= 6.23.0, < 6.29.1",
+        "affected": false
+      },
+      {
+        "package": "undici",
+        "path": "node_modules/undici",
+        "version": "7.30.2",
+        "affectedRange": ">= 7.18.0, < 7.30.1",
+        "affected": false
+      },
+      {
+        "package": "undici",
+        "path": "node_modules/undici",
+        "version": "7.30.2",
+        "affectedRange": ">= 8.0.0, < 8.12.2",
+        "affected": false
+      }
+    ]
+  },
+  {
+    "id": "GHSA-4w7w-5xrc-9h26",
+    "checks": [
+      {
+        "package": "undici",
+        "path": "node_modules/undici",
+        "version": "7.30.2",
+        "affectedRange": ">= 7.0.0, < 7.30.1",
+        "affected": false
+      },
+      {
+        "package": "undici",
+        "path": "node_modules/undici",
+        "version": "7.30.2",
+        "affectedRange": ">= 8.0.0, < 8.12.2",
+        "affected": false
+      }
+    ]
+  },
+  {
+    "id": "GHSA-2m5v-pch6-74hx",
+    "checks": [
+      {
+        "package": "undici",
+        "path": "node_modules/undici",
+        "version": "7.30.2",
+        "affectedRange": ">= 4.0.0, < 6.29.1",
+        "affected": false
+      },
+      {
+        "package": "undici",
+        "path": "node_modules/undici",
+        "version": "7.30.2",
+        "affectedRange": ">= 7.0.0, < 7.30.1",
+        "affected": false
+      },
+      {
+        "package": "undici",
+        "path": "node_modules/undici",
+        "version": "7.30.2",
+        "affectedRange": ">= 8.0.0, < 8.12.2",
+        "affected": false
+      }
+    ]
+  },
+  {
+    "id": "GHSA-qrxm-fqhp-jwvm",
+    "checks": [
+      {
+        "package": "undici",
+        "path": "node_modules/undici",
+        "version": "7.30.2",
+        "affectedRange": ">= 4.2.1, < 6.29.1",
+        "affected": false
+      },
+      {
+        "package": "undici",
+        "path": "node_modules/undici",
+        "version": "7.30.2",
+        "affectedRange": ">= 7.0.0, < 7.30.1",
+        "affected": false
+      },
+      {
+        "package": "undici",
+        "path": "node_modules/undici",
+        "version": "7.30.2",
+        "affectedRange": ">= 8.0.0, < 8.12.2",
+        "affected": false
+      }
+    ]
+  },
+  {
+    "id": "GHSA-587h-7wmj-h5pm",
+    "checks": [
+      {
+        "package": "vite",
+        "path": "node_modules/vite",
+        "version": "8.3.8",
+        "affectedRange": ">= 8.3.0, <= 8.3.2",
+        "affected": false
+      },
+      {
+        "package": "vite",
+        "path": "node_modules/vite",
+        "version": "8.3.8",
+        "affectedRange": ">= 8.2.0, <= 8.2.3",
+        "affected": false
+      },
+      {
+        "package": "vite",
+        "path": "node_modules/vite",
+        "version": "8.3.8",
+        "affectedRange": ">= 8.0.0, <= 8.1.5",
+        "affected": false
+      },
+      {
+        "package": "vite",
+        "path": "node_modules/vite",
+        "version": "8.3.8",
+        "affectedRange": ">= 7.0.0, <= 7.3.6",
+        "affected": false
+      },
+      {
+        "package": "vite",
+        "path": "node_modules/vite",
+        "version": "8.3.8",
+        "affectedRange": "<= 6.4.3",
+        "affected": false
+      }
+    ]
+  },
+  {
+    "id": "GHSA-mrhx-c7xc-m3w5",
+    "checks": [
+      {
+        "package": "zod",
+        "path": "node_modules/zod",
+        "version": "4.6.7",
+        "affectedRange": "< 4.6.6",
+        "affected": false
+      }
+    ]
+  }
+]

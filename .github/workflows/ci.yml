@@ -5,19 +5,26 @@ on:
     branches: [main]
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7.0.1
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7.1.0
         with:
-          node-version: 20
+          node-version: 24
           cache: npm
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Audit dependencies
+        run: npm audit --audit-level=high
 
       - name: Typecheck
         run: npm run typecheck
@@ -30,3 +37,12 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: Verify production export
+        run: npm run verify:export
+
+      - name: Install browser
+        run: npx playwright install --with-deps chromium
+
+      - name: Browser and accessibility regression tests
+        run: npm run test:e2e

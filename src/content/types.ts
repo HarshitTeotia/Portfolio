@@ -21,12 +21,10 @@ export type TechnologyId =
   | "google-adk"
   | "llm-integration"
   | "facebook-business-api"
-  | "asyncpg"
   | "redis"
   | "pydantic"
   | "jwt"
   | "pytest"
-  | "httpx"
   | "tesseract-ocr"
   | "pdfplumber"
   | "qdrant"
@@ -35,13 +33,19 @@ export type TechnologyId =
   | "s3"
   | "sqlalchemy"
   | "alembic"
-  | "argon2"
-  | "totp-2fa"
-  | "ruff"
-  | "mypy";
+  | "react"
+  | "rest-apis"
+  | "rag"
+  | "rbac";
 
 export type TechnologyCategory =
-  "backend" | "database" | "ai-ml" | "security" | "infrastructure" | "quality";
+  | "backend"
+  | "database"
+  | "ai-ml"
+  | "security"
+  | "infrastructure"
+  | "quality"
+  | "frontend";
 
 export interface Technology {
   id: TechnologyId;
@@ -118,6 +122,8 @@ export interface Project {
   challenges: string[];
   /** Only set when a factual, non-fabricated outcome is known. */
   outcome?: string;
+  investigation?: { title: string; findings: string[] };
+  lessons?: string[];
   links: ProjectLinks;
 }
 
@@ -137,6 +143,7 @@ export interface ExperienceEntry {
   company: string;
   dateRange: string;
   current: boolean;
+  location: string;
   summary: string;
   responsibilities: string[];
   relatedProjectIds: ProjectId[];

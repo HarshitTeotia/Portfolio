@@ -69,7 +69,7 @@ export function SectionHeading({
         className={cn("mb-5 max-w-24", align === "center" && "mx-auto")}
       />
       <ClipReveal delay={0.15} amount={0.6}>
-        <Heading className="font-display text-text-primary text-7xl leading-[0.95] font-semibold tracking-tight text-balance uppercase">
+        <Heading className="font-display text-text-primary text-[clamp(2.25rem,6vw,5.5rem)] leading-[1.05] font-semibold tracking-tight text-balance uppercase">
           {title}
         </Heading>
       </ClipReveal>

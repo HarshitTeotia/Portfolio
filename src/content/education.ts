@@ -3,7 +3,7 @@ import type { EducationEntry } from "./types";
 export const education: EducationEntry[] = [
   {
     id: "bca",
-    degree: "BCA — Computer Science",
+    degree: "Bachelor of Computer Applications (BCA)",
     institution: "Meerut Institute of Technology, Meerut",
     dateRange: "2020–2023",
     seasonId: "s01",
@@ -12,7 +12,8 @@ export const education: EducationEntry[] = [
   },
   {
     id: "mca",
-    degree: "MCA — Artificial Intelligence & Machine Learning",
+    degree:
+      "Master of Computer Applications (MCA) — Artificial Intelligence & Machine Learning",
     institution: "Chandigarh University",
     dateRange: "2023–2025",
     seasonId: "s02",

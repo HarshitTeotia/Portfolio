@@ -1,5 +1,7 @@
 # CHANGE_GUIDE.md
 
+> Phase 2 updated intro activation, modal behavior, project presentation, navigation, technology selection, hydration-safe reduced-motion branching, and static-link prefetch behavior. [Phase 2 report](PHASE_2_REPORT.md) and the root [project context](../PROJECT_CONTEXT.md) describe the current implementation; detailed tables below also retain earlier implementation history.
+
 The practical "if you want to change X, edit Y" reference for this repository. Every file path below was verified by reading the actual file — see [FILE_MAP.md](FILE_MAP.md) for full per-file detail and [ARCHITECTURE.md](ARCHITECTURE.md) for how the pieces connect.
 
 ---
@@ -35,7 +37,7 @@ The practical "if you want to change X, edit Y" reference for this repository. E
 | Which projects a role "built" (shown on `/experience`)                    | [src/content/experience.ts](../src/content/experience.ts) — `relatedProjectIds[]`                                                                                                                                                                                                               |
 | Career-phase label shown on project pages ("Phase 03 — Real World")       | [src/content/experience.ts](../src/content/experience.ts) — `phaseNumber`/`phaseLabel` on the relevant entry, resolved via `getProjectPhase()`                                                                                                                                                  |
 | About page text                                                           | [src/content/about.ts](../src/content/about.ts)                                                                                                                                                                                                                                                 |
-| About page photo                                                          | [src/content/about.ts](../src/content/about.ts) — set `photoSrc` to a real image path (currently `null`, renders a placeholder box)                                                                                                                                                             |
+| About page photo                                                          | [src/content/about.ts](../src/content/about.ts) — set `photoSrc` to a real image path (currently `/harshit.jpg`; null renders a placeholder)                                                                                                                                                    |
 | Education entries                                                         | [src/content/education.ts](../src/content/education.ts)                                                                                                                                                                                                                                         |
 | "Episodes"/season copy                                                    | [src/content/seasons.ts](../src/content/seasons.ts)                                                                                                                                                                                                                                             |
 | Contact page / social links                                               | [src/content/social.ts](../src/content/social.ts) — layout in [src/app/contact/page.tsx](../src/app/contact/page.tsx)                                                                                                                                                                           |
@@ -50,7 +52,7 @@ The practical "if you want to change X, edit Y" reference for this repository. E
 | Default scroll-reveal animation                                           | [src/lib/motion/variants.ts](../src/lib/motion/variants.ts) — `fadeUp` (used by `Reveal` and `StaggerItem` by default)                                                                                                                                                                          |
 | Mobile navigation                                                         | [src/components/layout/Header.tsx](../src/components/layout/Header.tsx) — the `menuOpen`/`AnimatePresence` block                                                                                                                                                                                |
 | Responsive breakpoints                                                    | Not overridden in this repo — Tailwind v4 defaults apply (`sm`/`md`/`lg`/`xl`/`2xl`); if you need custom breakpoints, add `--breakpoint-*` to `globals.css`'s `@theme inline` block                                                                                                             |
-| SEO title/description (root)                                              | [src/app/layout.tsx](../src/app/layout.tsx) — `title`/`description` consts (currently **hardcoded**, independent of `content/site.ts`)                                                                                                                                                          |
+| SEO title/description (root)                                              | [src/app/layout.tsx](../src/app/layout.tsx) — identity copy sourced from `content/site.ts`; per-route metadata uses `lib/page-metadata.ts`                                                                                                                                                      |
 | SEO title/description (per project)                                       | `generateMetadata()` in [src/app/projects/[slug]/page.tsx](../src/app/projects/[slug]/page.tsx)                                                                                                                                                                                                 |
 | `robots.txt` / `sitemap.xml` rules                                        | [src/app/robots.ts](../src/app/robots.ts) / [src/app/sitemap.ts](../src/app/sitemap.ts)                                                                                                                                                                                                         |
 | Production domain used in metadata                                        | `NEXT_PUBLIC_SITE_URL` env var (see [.env.example](../.env.example)), read by [src/lib/site-url.ts](../src/lib/site-url.ts) — set via the `SITE_URL` repository variable for the deployed GitHub Pages site                                                                                     |
@@ -127,7 +129,7 @@ src/components/ui/* (Badge, Button, Card, SectionHeading, Divider)
 
 1. Open [src/content/projects.ts](../src/content/projects.ts).
 2. Reorder the objects in the `projects` array (the array order _is_ the display order).
-3. Check `/projects` (index numbering), Home `FeaturedWork` (card order), `/about` ("Currently Building Across" list), `/tech` (project side panel order) — all derive their order from this same array, so no other file needs editing.
+3. Check `/projects` (index numbering), Home `FeaturedWork` (card order), `/about` ("Selected Project Contributions" list), `/tech` (project side panel order) — all derive their order from this same array, so no other file needs editing.
 4. `episodeNumber`/`episodeLabel` do **not** change — confirm that's intended (see "Two numbering systems" above).
 5. Run `npm run test` (checks unique ids/slugs/episode numbers) and `npm run build`.
 
@@ -166,7 +168,7 @@ src/components/ui/* (Badge, Button, Card, SectionHeading, Divider)
 1. Add a new object to the `projects` array in [src/content/projects.ts](../src/content/projects.ts) with a unique `id`, `slug`, and `episodeNumber`.
 2. Add its `id` to `ProjectId` in [src/content/types.ts](../src/content/types.ts).
 3. Add/extend entries in [src/content/technologies.ts](../src/content/technologies.ts)'s `usedIn[]` for every technology it uses (and list those technology ids in the new project's own `technologies[]` — both directions must agree).
-4. If the project belongs to an existing role, add its `id` to that entry's `relatedProjectIds` in [src/content/experience.ts](../src/content/experience.ts) (otherwise it will show "Independent Project" everywhere, like the Van Sales ERP project currently does).
+4. If the project belongs to an existing role, add its `id` to that entry's `relatedProjectIds` in [src/content/experience.ts](../src/content/experience.ts) (otherwise it will show "Backend Developer" everywhere, like the Van Sales ERP project currently does).
 5. Pick an `architecture.kind` (`pipeline`/`modules`/`evidence`) that matches the project's real shape — no new rendering code is needed for these three kinds.
 6. Run `npm run test` — `content.test.ts` will fail loudly on a duplicate id/slug/episode number, an unknown technology reference, an unknown project reference, or a missing required field.
 7. Run `npm run build` — the new project gets its own static route automatically via `generateStaticParams`, and a sitemap entry automatically via `sitemap.ts`.
@@ -192,7 +194,7 @@ src/components/ui/* (Badge, Button, Card, SectionHeading, Divider)
 1. Edit the entry in [src/content/experience.ts](../src/content/experience.ts) (`role`, `company`, `dateRange`, `summary`, `responsibilities[]`).
 2. If adding a second role, ensure at most one entry has `current: true` (`content.test.ts` enforces this).
 3. Set `relatedProjectIds[]` to real project ids, and `phaseNumber`/`phaseLabel` for the "Phase 0X — Label" text shown on project pages.
-4. Verify `/experience`, Home `StatusPill` (only shows the `current` entry), and `PersonJsonLd` (uses the `current` entry's `role`/`company`).
+4. Verify `/experience`, Home `StatusPill` (availability from `site.ts`), and `PersonJsonLd` (professional title; employer only if current).
 
 ### Change About
 

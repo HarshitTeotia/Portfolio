@@ -1,5 +1,7 @@
 # ARCHITECTURE.md
 
+> Phase 2 updated intro activation, modal behavior, project presentation, navigation, technology selection, hydration-safe reduced-motion branching, and static-link prefetch behavior. [Phase 2 report](PHASE_2_REPORT.md) and the root [project context](../PROJECT_CONTEXT.md) describe the current implementation; detailed tables below also retain earlier implementation history.
+
 Everything in this document is derived from reading the actual source in this repository. Where something common in Next.js projects does _not_ exist here (a CMS, an API layer, a database, Playwright, dark/light theming), that is stated explicitly rather than assumed.
 
 ---
@@ -28,7 +30,7 @@ Confirmed against `npm run build` output (17 routes generated) and each `page.ts
 **File:** `src/app/page.tsx`
 Server Component. Renders `<TrailerGate>` (client) wrapping `<Hero />`, `<FeaturedWork />`, `<TechTeaser />` (all Server Components).
 
-- **Data sources:** `src/content/site.ts` (Hero), `src/content/projects.ts` + `technologies.ts` + `experience.ts` (FeaturedWork), `src/content/technologies.ts` (TechTeaser), `src/content/experience.ts` (StatusPill, inside Hero).
+- **Data sources:** `src/content/site.ts` (Hero), `src/content/projects.ts` + `technologies.ts` + `experience.ts` (FeaturedWork), `src/content/technologies.ts` (TechTeaser), `src/content/site.ts` (StatusPill, inside Hero).
 - **Client components used:** `TrailerGate`, `WatchTrailerButton` (inside Hero), the `Reveal`/`ClipReveal`/`Parallax` motion primitives, `Trailer` (mounted conditionally by `TrailerGate`).
 - **Animation:** page-load stagger sequence in Hero (`Reveal` with hand-tuned delays 0.1s→0.75s), full cinematic trailer overlay on first visit.
 - **Links:** to every project (`/projects/[slug]`), `/projects`, `/tech`.
@@ -36,7 +38,7 @@ Server Component. Renders `<TrailerGate>` (client) wrapping `<Hero />`, `<Featur
 ### `/episodes`
 
 **File:** `src/app/episodes/page.tsx`
-Server Component. Renders `SeasonBlock` for each entry in `src/content/seasons.ts`; the `s03` (current, "The Real World") season is given all 4 projects as `projectEpisodes` — **all four projects are hardcoded to season `s03`** in this page (`const s03ProjectEpisodes = projects`), not derived from any per-project season field.
+Server Component. Renders SeasonBlock for education and the completed Vrozart role. Only employer-associated projects are assigned to S03; ERP is linked separately without inferred attribution.
 
 - **Data sources:** `src/content/seasons.ts`, `src/content/projects.ts`.
 - **Client components used:** none directly in the page; `SeasonBlock` composes `Stagger`/`StaggerItem`/`DrawLine` (client) with `Card`/`Badge` (server).
@@ -59,7 +61,7 @@ Server Component (`async function`, awaits `props.params`).
 - **Invalid slug handling:** if `getProjectBySlug` returns `undefined`, the page calls `notFound()` from `next/navigation`, which renders `src/app/not-found.tsx`.
 - **Metadata:** `generateMetadata()` builds a per-project `<title>`/description from `project.title`/`positioning`/`theme`; returns `{}` (no override) for an unknown slug.
 - **Navigation between projects:** there is **no "next/previous project" navigation** on this page — only a "← All projects" link back to `/projects`. (See Known Limitations.)
-- **Sections rendered, in order:** back-link → header (project number, episode title, title, positioning, role, phase) → Problem → Solution → Architecture (`ArchitectureView`) → Technology badges → Highlights → Challenges (conditional on non-empty array) → Outcome (conditional on `project.outcome` being set — currently `undefined` for all 4 projects) → `ProjectLinksRow`.
+- **Sections rendered, in order:** back-link → header (project number, episode title, title, positioning, role, phase) → Problem → Solution → Architecture (`ArchitectureView`) → Technology badges → Highlights → Challenges (conditional on non-empty array) → Prompt-Injection Investigation and Lessons (optional) → Outcome (conditional on `project.outcome` being set — currently `undefined` for all 4 projects) → `ProjectLinksRow`.
 
 ### `/tech`
 
@@ -77,7 +79,7 @@ Server Component. Iterates `src/content/experience.ts` (currently one entry), re
 ### `/about`
 
 **File:** `src/app/about/page.tsx`
-Server Component. Renders `about.ts` (hero statement, summary, "What I Build", "How I Work", "Engineering Focus" tag cloud), a photo slot (placeholder box if `about.photoSrc` is `null`, which it currently is), the live `projects` list ("Currently Building Across"), and `education.ts` entries. Ends with a link to `/episodes`.
+Server Component. Renders `about.ts` (hero statement, summary, "What I Build", "How I Work", "Engineering Focus" tag cloud), a photo slot (placeholder box if `about.photoSrc` is `null`, now configured to `/harshit.jpg`), the live `projects` list ("Selected Project Contributions"), and `education.ts` entries. Ends with a link to `/episodes`.
 
 ### `/contact`
 
@@ -103,7 +105,7 @@ Server Component. Shown for any unmatched route and for `notFound()` calls (e.g.
 ### Root layout
 
 **File:** `src/app/layout.tsx`
-Wraps every route: loads 3 Google fonts (`Space_Grotesk`, `Inter`, `JetBrains_Mono`) via `next/font/google`, defines root `<Metadata>` (title/description — **hardcoded strings, not sourced from `content/site.ts`**, see Known Limitations), renders `<PersonJsonLd />`, a skip-to-content link, `<Header />`, `<main>` (wrapped in `<RouteTransition>`), and `<Footer />`.
+Wraps every route: loads 3 Google fonts (`Space_Grotesk`, `Inter`, `JetBrains_Mono`) via `next/font/google`, defines root `<Metadata>` (title/description from `content/site.ts`), renders `<PersonJsonLd />`, a skip-to-content link, `<Header />`, `<main>` (wrapped in `<RouteTransition>`), and `<Footer />`.
 
 ---
 
@@ -140,10 +142,10 @@ There is no "Hero" _directory_ — Hero is a single file in `home/`. There is no
 src/content/projects.ts (projects[])
   ├─→ /projects (index)
   ├─→ /projects/[slug] (detail, via getProjectBySlug)
-  ├─→ Home → FeaturedWork (all 4, as teaser cards)
-  ├─→ /about → "Currently Building Across" list
+  ├─→ Home → FeaturedWork (three primary case studies)
+  ├─→ /about → "Selected Project Contributions" list
   ├─→ /experience → relatedProjects per entry
-  ├─→ /episodes → SeasonBlock (s03 only, hardcoded in episodes/page.tsx)
+  ├─→ /episodes → SeasonBlock (employer-associated projects only)
   ├─→ /tech → TechMap (project panel + tech↔project graph)
   ├─→ sitemap.ts → one sitemap entry per project slug
   └─→ content.test.ts → schema/integrity tests
@@ -156,7 +158,6 @@ src/content/technologies.ts (technologies[]) + categories.ts (grouping)
 
 src/content/experience.ts (experience[] + getProjectPhase())
   ├─→ /experience (main timeline)
-  ├─→ Home → StatusPill (finds the entry with current: true)
   ├─→ PersonJsonLd → jobTitle / worksFor
   └─→ /projects, /projects/[slug], Home→FeaturedWork → "PHASE 0X — LABEL" badge via getProjectPhase(project.id)
 
@@ -166,7 +167,7 @@ src/content/seasons.ts (seasons[]) ──→ /episodes only
 src/content/trailer.ts (trailerScenes[]) ──→ Trailer.tsx only (switched on scene.id)
 src/content/social.ts (socialLinks[]) ──→ Footer, /contact, Header (resume link only)
 src/content/site.ts (site{}) ──→ Hero, Header, Footer, /about, Trailer (title scene + aria-label), PersonJsonLd
-                                    NOTE: does NOT feed the root <title>/description in layout.tsx (see Known Limitations)
+                                    Also feeds root metadata and availability; per-route metadata uses lib/page-metadata.ts.
 src/components/layout/nav-items.ts (navItems[]) ──→ Header + Footer (the only two consumers)
 ```
 
@@ -174,16 +175,16 @@ There is **no barrel re-export file** for content — every consumer imports dir
 
 ### Project architecture (Phase 5 detail)
 
-| Project                      | `id` / `slug`                                  | Array order | `episodeNumber` / label | `architecture.kind`                                                                       | Career phase source                                                                                                                                                             |
-| ---------------------------- | ---------------------------------------------- | ----------- | ----------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Vrozart Finance              | `vrozart-finance` / `vrozart-finance`          | 1st         | 6 / `EP 06`             | `pipeline` (7 steps: intake→OCR→chunking→embeddings→vector storage→similarity search→RAG) | Phase 03 "Real World" (via `experience.ts` → `relatedProjectIds`)                                                                                                               |
-| HAUT                         | `haut` / `haut`                                | 2nd         | 5 / `EP 05`             | `modules` (6 groups + a 4-step `requestFlow`)                                             | Phase 03 "Real World"                                                                                                                                                           |
-| Van Sales & Distribution ERP | `van-sales-erp` / `van-sales-distribution-erp` | 3rd         | 7 / `EP 07`             | `evidence` (5 metrics + a 5-step `requestFlow`)                                           | **`null`** — not in any `experience.ts` entry's `relatedProjectIds`; renders as "Independent Project" (this is a freelance project per `role: "Backend Developer (freelance)"`) |
-| Viblets                      | `viblets` / `viblets`                          | 4th         | 4 / `EP 04`             | `pipeline` (7 steps)                                                                      | Phase 03 "Real World"                                                                                                                                                           |
+| Project                      | `id` / `slug`                                  | Array order | `episodeNumber` / label | `architecture.kind`                                                                       | Career phase source                                                               |
+| ---------------------------- | ---------------------------------------------- | ----------- | ----------------------- | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| Vrozart Finance              | `vrozart-finance` / `vrozart-finance`          | 1st         | 6 / `EP 06`             | `pipeline` (7 steps: intake→OCR→chunking→embeddings→vector storage→similarity search→RAG) | Phase 03 "Real World" (via `experience.ts` → `relatedProjectIds`)                 |
+| HAUT                         | `haut` / `haut`                                | 3rd         | 5 / `EP 05`             | `modules` (4 groups + a 4-step `requestFlow`)                                             | Phase 03 "Real World"                                                             |
+| Van Sales & Distribution ERP | `van-sales-erp` / `van-sales-distribution-erp` | 2nd         | 7 / `EP 07`             | `evidence` (4 verified metrics + a 5-step `requestFlow`)                                  | **`null`** — employment attribution unconfirmed; neutral Backend Developer label. |
+| Viblets                      | `viblets` / `viblets`                          | 4th         | 4 / `EP 04`             | `pipeline` (7 steps)                                                                      | Phase 03 "Real World"                                                             |
 
 **Display order vs. episode order:** the `projects` array order (1st–4th above) drives every "Project 01/02/03/04" label in the UI (`/projects`, `/projects/[slug]` header, `/about`). `episodeNumber`/`episodeLabel` (`EP 04`–`EP 07`) is a _separate_, intentionally non-renumbered narrative sequence used only on `/episodes` and each project's `episodeTitle`/`episodeLabel` display. **Changing one does not change the other** — see [CHANGE_GUIDE.md](CHANGE_GUIDE.md).
 
-Every project's `links.github` is `{ url: null, isPrivate: true }` — no project currently has a public repo link or a `links.demo` entry at all.
+Every project's `links.github` is `{ url: null, isPrivate: true }` — no project currently has a public repo link or a verified demo URL; lending has an optional null demo entry.
 
 ---
 
@@ -219,7 +220,7 @@ No unnecessary Client Components were found beyond the `TrailerStage` note above
 | `src/content/content.test.ts`           | Schema/integrity tests: unique project ids/slugs/episode numbers; every project's `technologies` reference a real `Technology`; required narrative fields non-empty; no project has both a GitHub URL and `isPrivate: true`; every technology traces to ≥1 real project (no orphan buzzwords); the tech↔project graph is symmetric both directions; season ids/codes unique with non-empty story; experience `relatedProjectIds` reference real projects; at most one `current: true` experience entry; education `seasonId` references a real season; email social link is a real `mailto:`; all other social links are `null` or a real non-empty string | `npm run test` |
 | `src/components/layout/Header.test.tsx` | Renders every nav item; marks the current route via `aria-current="page"`; mobile menu toggle starts closed (`aria-expanded="false"`)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | `npm run test` |
 
-Total: **2 test files, 16 tests** (verified: `npm run test` → "Test Files 2 passed (2)", "Tests 16 passed (16)").
+Tests also cover the November 2026 employment snapshot, local resume presence, raw asset prefixes, and canonical/sharing metadata. See the Phase 1 report for actual current results.
 
 **Playwright / end-to-end testing: NOT CONFIGURED.** No `playwright.config.ts`, no e2e directory exists.
 **Lighthouse / performance auditing: NOT CONFIGURED.** No Lighthouse config or CI step exists.
@@ -276,7 +277,7 @@ All three are load-bearing — none is safe to remove without replacing the feat
 | `eslint`, `eslint-config-next`                                                                   | Linting, enforced in CI         | No — CI will fail without it                                        |
 | `prettier`, `prettier-plugin-tailwindcss`                                                        | Formatting, enforced pre-commit | No — pre-commit hook depends on it                                  |
 | `husky`, `lint-staged`                                                                           | Git hook infrastructure         | No, unless the team explicitly wants to drop pre-commit enforcement |
-| `vitest`, `@vitejs/plugin-react`, `jsdom`, `@testing-library/react`, `@testing-library/jest-dom` | Test infrastructure             | No — 16 tests depend on this stack                                  |
+| `vitest`, `@vitejs/plugin-react`, `jsdom`, `@testing-library/react`, `@testing-library/jest-dom` | Test infrastructure             | No — unit/content tests depend on this stack                        |
 
 This is documentation only — no dependency was removed or added as part of this analysis.
 
@@ -284,13 +285,13 @@ This is documentation only — no dependency was removed or added as part of thi
 
 ## 9. Environment variables
 
-| Variable               | Where used                                                                                                                                                  | Purpose                                                                                            | Public/Server                                                 | Required?                                                                                           | Safe example                |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------- |
-| `NEXT_PUBLIC_SITE_URL` | `src/lib/site-url.ts` → consumed by `src/app/layout.tsx` (`metadataBase`), `src/app/robots.ts`, `src/app/sitemap.ts`, `src/components/seo/PersonJsonLd.tsx` | The canonical production domain, used for absolute URLs in metadata/OG tags/sitemap/robots/JSON-LD | **Public** (`NEXT_PUBLIC_` prefix — bundled into client code) | Optional in dev (falls back to `http://localhost:3000`); **should be set before production deploy** | `https://harshitteotia.dev` |
+| Variable               | Where used                                                                                                                                                  | Purpose                                                                                            | Public/Server                                                 | Required?                                                                                                             | Safe example                |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| `NEXT_PUBLIC_SITE_URL` | `src/lib/site-url.ts` → consumed by `src/app/layout.tsx` (`metadataBase`), `src/app/robots.ts`, `src/app/sitemap.ts`, `src/components/seo/PersonJsonLd.tsx` | The canonical production domain, used for absolute URLs in metadata/OG tags/sitemap/robots/JSON-LD | **Public** (`NEXT_PUBLIC_` prefix — bundled into client code) | Optional in dev (defaults to `https://harshitteotia.github.io/Portfolio`); **should be set before production deploy** | `https://harshitteotia.dev` |
 
 This is the **only** environment variable used anywhere in the codebase (confirmed by inspecting every `process.env` reference). No secrets exist in this project. `.env.example` documents this variable with no default value; `.env.local` is git-ignored.
 
-In the GitHub Pages deployment (`.github/workflows/deploy.yml`), this is set from an optional repository variable named `SITE_URL` (Settings → Secrets and variables → Actions → Variables) — the workflow only injects it if that variable is non-empty, so an unconfigured deploy still builds successfully (with the `localhost:3000` fallback in its metadata) rather than failing.
+In the GitHub Pages deployment (`.github/workflows/deploy.yml`), this is set from an optional repository variable named `SITE_URL` (Settings → Secrets and variables → Actions → Variables) — the workflow only injects it if that variable is non-empty, so an unconfigured deploy still builds successfully (with the verified GitHub Pages default in its metadata) rather than failing.
 
 Two build-time-only variables (not consumed by application code, only by `next.config.ts`) also affect the static export:
 
@@ -319,7 +320,7 @@ The app is configured (`next.config.ts`) to build as a fully static site, deploy
 | -------------------- | ---------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `output`             | `"export"`                                                                                                 | GitHub Pages only serves static files — there is no Node server to run Next's default request-time renderer. Verified against `node_modules/next/dist/docs/01-app/02-guides/static-exports.md`.                                                                                                                                                                                                                                                                                                                                                                                                     |
 | `trailingSlash`      | `true`                                                                                                     | Static export writes `<route>/index.html` instead of `<route>.html` — the layout static hosts (including GitHub Pages) resolve most reliably, since a directory request naturally serves its `index.html`. Verified this doesn't change any rendered UI — `next/link` automatically rewrites every internal `href` to match (confirmed by inspecting the built HTML: `/about` renders as `href="/about/"` with zero code changes to `nav-items.ts` or any component).                                                                                                                               |
-| `images.unoptimized` | `true`                                                                                                     | GitHub Pages has no image-optimization endpoint to call at request time; `next/image` (used in `src/app/about/page.tsx`, currently inert since `about.photoSrc` is `null`) falls back to serving the original file byte-for-byte. Required — `output: "export"` throws a build error with the default image loader.                                                                                                                                                                                                                                                                                 |
+| `images.unoptimized` | `true`                                                                                                     | GitHub Pages has no image-optimization endpoint to call at request time; `next/image` (used in `src/app/about/page.tsx`, configured with the existing portrait) falls back to serving the original file byte-for-byte. Required — `output: "export"` throws a build error with the default image loader.                                                                                                                                                                                                                                                                                            |
 | `basePath`           | Auto-derived from `process.env.GITHUB_REPOSITORY` (format `owner/repo`, always provided by GitHub Actions) | GitHub Pages serves a **user/org page** (repo named `<owner>.github.io`) at the domain root, but a **project page** (any other repo name) under `/<repo-name>/`. The logic in `next.config.ts` picks the right one automatically — empirically verified both cases by simulating `GITHUB_REPOSITORY` locally and inspecting the generated HTML's `href`/`src` attributes for the correct prefix (or its absence). An explicit `BASE_PATH` env var overrides the auto-detection (e.g. for a custom domain on a non-`.github.io`-named repo, which should serve from the root despite the repo name). |
 
 `assetPrefix` is deliberately **not** set — Next's own docs explicitly recommend `basePath` over `assetPrefix` for sub-path hosting ("We do not suggest you use a custom Asset Prefix for this use case").

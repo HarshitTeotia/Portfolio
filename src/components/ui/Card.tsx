@@ -18,7 +18,7 @@ export function Card({ children, className }: CardProps) {
       className={cn(
         "border-border bg-bg-elevated border p-6",
         "duration-base ease-standard transition-[transform,border-color,box-shadow]",
-        "hover:border-accent-500/40 hover:-translate-y-1 hover:shadow-[0_20px_40px_-24px_var(--color-accent-glow)]",
+        "focus-within:border-accent-400 hover:border-accent-500/40 hover:shadow-[0_20px_40px_-24px_var(--color-accent-glow)] motion-safe:hover:-translate-y-0.5",
         className
       )}
     >

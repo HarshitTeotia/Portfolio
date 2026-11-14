@@ -1,21 +1,7 @@
 import type { Project } from "./types";
 
-/**
- * All four projects are real work. Nothing here is fabricated — see the
- * project brief in conversation history for source facts. Fields left
- * unset (outcome, links.*.url) are unset because the fact isn't confirmed
- * yet, not because they were forgotten.
- *
- * `links.github`/`links.demo` default to `{ url: null, isPrivate: true }`
- * for all four — these are employer/client codebases, presumed private
- * until confirmed otherwise. Flip `isPrivate` and set `url` per-project
- * once you confirm which (if any) can be public.
- *
- * Display order (this array's order) was deliberately changed to lead with
- * Vrozart Finance — it's independent of `episodeNumber`/`episodeLabel`,
- * which stay tied to each project's place in the season/episode story and
- * are not renumbered when the listing order changes.
- */
+/** Primary case studies first; existing route slugs and episode numbers are preserved.
+ * Facts reviewed against the November 13, 2026 brief. Viblets retains its existing narrative. */
 export const projects: Project[] = [
   {
     id: "vrozart-finance",
@@ -23,116 +9,101 @@ export const projects: Project[] = [
     episodeNumber: 6,
     episodeLabel: "EP 06",
     episodeTitle: "Reading Between the Lines",
-    title: "Vrozart Finance",
-    positioning: "AI-powered Finance / Lending Platform",
-    theme: "Turning stacks of documents into something a backend can query.",
+    title: "MSME Lending & AI-Powered Loan Management Platform",
+    positioning: "Backend Engineering / Applied AI & Document Intelligence",
+    theme:
+      "Loan application APIs, financial-document retrieval, and an investigation into LLM data integrity.",
     problem:
-      "Finance and lending workflows depend on reading identity and financial documents by hand — slow, and not something a system can search or reason over at scale.",
+      "MSME loan applications combine structured application information with uploaded financial documents. The backend needs to validate business workflows and make document information retrievable for AI-assisted responses.",
     solution:
-      "A document-intelligence pipeline: incoming documents go through OCR/extraction (Tesseract, PDFPlumber), get chunked, embedded (OpenAI embeddings), and stored in Qdrant for cosine-similarity search — feeding a RAG workflow built on Google ADK / AI workflows that the backend APIs and business logic query directly.",
-    role: "Backend Developer, with some frontend work (bug fixes and a new frontend module)",
+      "A FastAPI and PostgreSQL application with React modules, Google ADK conversational flows, and a document pipeline using OCR/PDF extraction, chunking, metadata, embeddings, Qdrant retrieval, and RAG. Celery and AWS S3 support document processing and storage.",
+    role: "Python Developer — backend APIs, document/AI workflow integration, and React contributions",
     architecture: {
       kind: "pipeline",
       steps: [
-        { label: "Document intake", detail: "Stored in S3" },
-        { label: "OCR / extraction", detail: "Tesseract + PDFPlumber" },
-        { label: "Chunking" },
-        { label: "Embeddings", detail: "OpenAI embeddings" },
-        { label: "Vector storage", detail: "Qdrant" },
-        { label: "Similarity search", detail: "Cosine similarity" },
-        { label: "RAG workflow", detail: "Google ADK / AI workflows" },
+        {
+          label: "Document intake",
+          detail: "Stored in S3",
+        },
+        {
+          label: "OCR / extraction",
+          detail: "Tesseract + PDFPlumber",
+        },
+        {
+          label: "Chunking",
+        },
+        {
+          label: "Embeddings",
+          detail: "Document embeddings",
+        },
+        {
+          label: "Vector storage",
+          detail: "Qdrant",
+        },
+        {
+          label: "Similarity search",
+          detail: "Vector retrieval",
+        },
+        {
+          label: "RAG workflow",
+          detail: "Google ADK / AI workflows",
+        },
       ],
-      notes: ["Ingestion runs through Celery so it doesn't block API requests."],
+      notes: [
+        "Document processing uses Celery; uploaded files are stored in AWS S3.",
+        "Architecture overview of the workflow; security mitigations are proposals, not verified deployed controls.",
+      ],
     },
     technologies: [
       "python",
       "fastapi",
+      "postgresql",
+      "react",
       "google-adk",
-      "llm-integration",
-      "tesseract-ocr",
-      "pdfplumber",
       "qdrant",
-      "openai-embeddings",
       "celery",
       "s3",
-      "postgresql",
+      "tesseract-ocr",
+      "pdfplumber",
+      "rest-apis",
+      "llm-integration",
+      "rag",
+      "openai-embeddings",
     ],
     highlights: [
-      "End-to-end RAG pipeline: OCR → chunking → embeddings → Qdrant → cosine-similarity retrieval",
-      "Google ADK-based AI workflows over extracted document data",
-      "Celery-driven background processing so document ingestion doesn't block the API",
-      "Backend APIs, business workflows, and state management around the pipeline — plus some frontend bug-fixing and a new frontend module",
+      "Developed and integrated backend APIs for loan applications and financial-document workflows.",
+      "Worked with Tesseract OCR and PDFPlumber to extract uploaded financial-document content.",
+      "Supported chunking, metadata handling, embeddings, Qdrant vector retrieval, and RAG-based information retrieval.",
+      "Worked with Google ADK conversational flows for structured loan application information.",
+      "Contributed application validation and business rules, React modules, and frontend/backend work involving approximately 40+ API integrations.",
     ],
     challenges: [
-      "Keeping a multi-stage async pipeline (OCR → embeddings → vector storage) consistent and observable, since a failure at any stage has to be retryable without corrupting downstream state.",
+      "Keeping document extraction, retrieval, and application validation distinct: an LLM-generated financial response should be checked against its source rather than treated as authoritative business data.",
     ],
     links: {
-      github: { url: null, label: "GitHub", isPrivate: true },
+      github: {
+        url: null,
+        label: "GitHub",
+        isPrivate: true,
+      },
+      demo: {
+        url: null,
+        label: "Watch project demo",
+      },
     },
-  },
-  {
-    id: "haut",
-    slug: "haut",
-    episodeNumber: 5,
-    episodeLabel: "EP 05",
-    episodeTitle: "Running the Floor",
-    title: "HAUT",
-    positioning: "Club & Pub Management / Hospitality Operations Platform",
-    theme: "The backend running an entire venue — floor to kitchen to ledger.",
-    problem:
-      "Hospitality venues (clubs and pubs) needed a single system to run bookings, POS, kitchen operations, inventory, purchasing, staff, and billing instead of stitching together disconnected tools.",
-    solution:
-      "A backend-driven hospitality operations platform covering venue and outlet management, bookings, POS, KDS, QR ordering, inventory, purchasing, GRN, recipes and recipe costing, employees, billing, payments, discounts, and reporting/analytics — with role-based access control enforced throughout.",
-    role: "Backend Developer",
-    architecture: {
-      kind: "modules",
-      groups: [
-        {
-          title: "Venue & Access",
-          items: ["Venue management", "Outlet management", "Employee management", "RBAC"],
-        },
-        { title: "Front of House", items: ["Bookings", "Tables", "QR ordering", "POS"] },
-        {
-          title: "Back of House",
-          items: ["KDS (kitchen display system)", "Order routing"],
-        },
-        {
-          title: "Inventory & Supply",
-          items: ["Inventory", "Purchasing", "GRN", "Recipes", "Recipe costing"],
-        },
-        { title: "Commerce", items: ["Billing", "Payments", "Discounts"] },
-        { title: "Insight", items: ["Reports", "Analytics"] },
-      ],
-      requestFlow: [
-        { label: "Client / POS / Mobile" },
-        { label: "FastAPI" },
-        { label: "RBAC / Business Logic" },
-        { label: "PostgreSQL" },
+    investigation: {
+      title: "Prompt-Injection Investigation",
+      findings: [
+        "Reproduced and analyzed a document-grounded LLM/RAG failure during testing: instructions embedded in a PDF influenced the generated financial response.",
+        "In an anonymized test example, the original income figure was INR 3 LPA, while the manipulated output reported INR 15 LPA. This demonstrated a data-integrity risk in the document workflow.",
+        "Identified the trust-boundary problem between untrusted document content and application instructions. Proposed safer retrieval-grounding, instruction separation, and source validation approaches.",
+        "The confirmed work was investigation, reproduction, and proposed mitigations. Deployment of safeguards and a complete fix have not been verified.",
       ],
     },
-    technologies: [
-      "python",
-      "fastapi",
-      "postgresql",
-      "asyncpg",
-      "redis",
-      "pydantic",
-      "jwt",
-      "pytest",
-      "httpx",
+    lessons: [
+      "Treat retrieved text as untrusted data, with a clear separation from application instructions.",
+      "Validate financial outputs against source evidence and backend business rules; fluent generated text is not proof of correctness.",
     ],
-    highlights: [
-      "Backend spanning venue, outlet, POS, KDS, inventory, purchasing, and finance in one system",
-      "Async FastAPI + PostgreSQL, with Redis alongside for supporting workloads",
-      "RBAC-driven access control across venue, outlet, and employee roles",
-      "REST API layer built for real POS / KDS / QR-ordering client integrations",
-    ],
-    challenges: [
-      "Designing a single RBAC and business-logic layer flexible enough to serve venue management, POS, kitchen operations, and finance/reporting without collapsing into a pile of special cases.",
-    ],
-    links: {
-      github: { url: null, label: "GitHub", isPrivate: true },
-    },
   },
   {
     id: "van-sales-erp",
@@ -141,35 +112,55 @@ export const projects: Project[] = [
     episodeLabel: "EP 07",
     episodeTitle: "The Deep Build",
     title: "Van Sales & Distribution ERP",
-    positioning: "Multi-Tenant FMCG Distribution ERP",
+    positioning: "Multi-Tenant Backend Engineering / ERP Systems",
     theme:
-      "The architecture episode — migrations, tests, and a bug that took real diagnosis.",
+      "Nine business modules, 16 system roles, 18 migrations, and 176+ automated tests.",
     problem:
-      "FMCG distributors running van-sales operations across multiple branches needed a backend that enforces tenant isolation, role-based permissions, and a real operational lifecycle (purchasing → van loading → route execution → sales) instead of a flat CRUD system.",
+      "Distribution operations need connected inventory, purchasing, credit, van loading, route, and accounting workflows with consistent permissions and business validation.",
     solution:
-      "A modular, layered-monolith FastAPI backend: multi-tenant and multi-branch from the schema up, with a 5-tier / 16-role permission model, explicit state machines for order and route lifecycles, full audit logging, and modules covering auth, purchasing, inventory, van loading, routes, sales orders, and promotions.",
-    role: "Backend Developer (freelance)",
+      "A modular, multi-tenant FastAPI backend backed by PostgreSQL and asynchronous SQLAlchemy, with JWT/RBAC, Alembic migrations, approval workflows, validation, audit logging, and Pytest coverage.",
+    role: "Backend Developer",
     architecture: {
       kind: "evidence",
       metrics: [
-        { label: "Database migrations", value: "18" },
-        { label: "Automated tests", value: "176+" },
-        { label: "System roles", value: "16" },
-        { label: "Permission tiers", value: "5" },
-        { label: "Business-domain modules", value: "9" },
+        {
+          label: "Database migrations",
+          value: "18",
+        },
+        {
+          label: "Automated tests",
+          value: "176+",
+        },
+        {
+          label: "System roles",
+          value: "16",
+        },
+        {
+          label: "Business-domain modules",
+          value: "9",
+        },
       ],
       requestFlow: [
-        { label: "Multi-Tenant" },
-        { label: "RBAC" },
-        { label: "Domain Modules" },
-        { label: "Async SQLAlchemy" },
-        { label: "PostgreSQL" },
+        {
+          label: "Multi-Tenant",
+        },
+        {
+          label: "RBAC",
+        },
+        {
+          label: "Domain Modules",
+        },
+        {
+          label: "Async SQLAlchemy",
+        },
+        {
+          label: "PostgreSQL",
+        },
       ],
       notes: [
-        "Modular layered-monolith architecture",
-        "Multi-tenant, multi-branch from the schema up",
-        "Explicit state machines for order and route lifecycles",
-        "Full audit logging across tenant boundaries",
+        "Modular multi-tenant backend",
+        "Approval workflows, validation, and audit logging",
+        "Nine business modules supported by database migrations and automated tests",
       ],
     },
     technologies: [
@@ -177,32 +168,111 @@ export const projects: Project[] = [
       "fastapi",
       "postgresql",
       "sqlalchemy",
-      "asyncpg",
       "alembic",
-      "pydantic",
-      "jwt",
-      "argon2",
-      "totp-2fa",
-      "s3",
-      "redis",
       "pytest",
-      "httpx",
-      "ruff",
-      "mypy",
+      "rest-apis",
+      "jwt",
+      "rbac",
     ],
     highlights: [
-      "18 database migrations, 176+ automated tests (pytest + pytest-asyncio) against real HTTP + PostgreSQL integration",
-      "16 system roles under a 5-tier permission model, enforced with explicit RBAC",
-      "Diagnosed and fixed a systemic async SQLAlchemy MissingGreenlet issue",
-      "JWT auth with Argon2 password hashing and TOTP-based 2FA",
-      "Explicit state machines for order and route lifecycles, with full audit logging",
+      "Contributed across nine business modules: inventory, purchasing, goods receipt, pricing, customer credit, van loading, routes, inventory ledger, and accounting workflows.",
+      "Worked on authorization and RBAC across 16 system roles.",
+      "Contributed approval workflows, business validation, and audit logging.",
+      "Worked with 18 Alembic database migrations and developed and executed an automated suite containing 176+ tests.",
+      "Investigated and resolved an asynchronous SQLAlchemy MissingGreenlet problem.",
     ],
     challenges: [
-      "A systemic async MissingGreenlet failure in SQLAlchemy's async session handling was surfacing intermittently across endpoints — traced it to a session-lifecycle / greenlet-context mismatch and fixed it at the root instead of patching individual call sites.",
+      "Diagnosed and resolved an asynchronous SQLAlchemy MissingGreenlet failure. This reinforced the importance of checking async ORM behavior alongside API workflows.",
     ],
     links: {
-      github: { url: null, label: "GitHub", isPrivate: true },
+      github: {
+        url: null,
+        label: "GitHub",
+        isPrivate: true,
+      },
     },
+    lessons: [
+      "Test permission boundaries, approval transitions, and database changes alongside individual endpoints.",
+    ],
+  },
+  {
+    id: "haut",
+    slug: "haut",
+    episodeNumber: 5,
+    episodeLabel: "EP 05",
+    episodeTitle: "Running the Floor",
+    title: "HAUT: Hospitality Booking & Operations Platform",
+    positioning: "Hospitality Operations / Backend Systems",
+    theme:
+      "One backend supporting bookings, POS, kitchen displays, QR ordering, and billing.",
+    problem:
+      "Venue operations require connected booking, order, kitchen, inventory, and billing workflows, with consistent access control and validation across several client applications.",
+    solution:
+      "FastAPI backend services with PostgreSQL, Redis, and Pydantic, supporting venue bookings, POS and billing, kitchen displays and order management, QR ordering, and inventory-related operational modules.",
+    role: "Backend Developer",
+    architecture: {
+      kind: "modules",
+      groups: [
+        {
+          title: "Venue & Access",
+          items: ["Bookings", "Venue operations", "Authentication / RBAC"],
+        },
+        {
+          title: "Ordering",
+          items: ["POS", "QR ordering", "Order management"],
+        },
+        {
+          title: "Kitchen",
+          items: ["Kitchen display system", "Order workflows"],
+        },
+        {
+          title: "Operations",
+          items: ["Inventory workflows", "Billing"],
+        },
+      ],
+      requestFlow: [
+        {
+          label: "Client / POS / Mobile",
+        },
+        {
+          label: "FastAPI",
+        },
+        {
+          label: "RBAC / Business Logic",
+        },
+        {
+          label: "PostgreSQL",
+        },
+      ],
+    },
+    technologies: [
+      "python",
+      "fastapi",
+      "postgresql",
+      "redis",
+      "pydantic",
+      "rest-apis",
+      "rbac",
+    ],
+    highlights: [
+      "Contributed backend services for bookings and venue operations.",
+      "Worked on POS and billing workflows and supported kitchen display and order management functionality.",
+      "Worked with QR ordering, inventory-related workflows, and operational modules.",
+      "Contributed authentication, RBAC, validation, and integrations used by frontend, POS, and KDS clients.",
+    ],
+    challenges: [
+      "Supporting several operational workflows through one backend while keeping permissions, input validation, and client integrations consistent.",
+    ],
+    links: {
+      github: {
+        url: null,
+        label: "GitHub",
+        isPrivate: true,
+      },
+    },
+    lessons: [
+      "Operational clients need clear API contracts and consistent validation across booking, ordering, kitchen, and billing workflows.",
+    ],
   },
   {
     id: "viblets",
@@ -221,13 +291,30 @@ export const projects: Project[] = [
     architecture: {
       kind: "pipeline",
       steps: [
-        { label: "Customer data intake" },
-        { label: "AI Agent", detail: "Google ADK orchestrates the workflow" },
-        { label: "Persist", detail: "FastAPI + PostgreSQL" },
-        { label: "Connect Facebook account", detail: "OAuth handoff" },
-        { label: "Fetch Facebook Business Accounts" },
-        { label: "Fetch associated business details" },
-        { label: "Automated marketing workflow" },
+        {
+          label: "Customer data intake",
+        },
+        {
+          label: "AI Agent",
+          detail: "Google ADK orchestrates the workflow",
+        },
+        {
+          label: "Persist",
+          detail: "FastAPI + PostgreSQL",
+        },
+        {
+          label: "Connect Facebook account",
+          detail: "OAuth handoff",
+        },
+        {
+          label: "Fetch Facebook Business Accounts",
+        },
+        {
+          label: "Fetch associated business details",
+        },
+        {
+          label: "Automated marketing workflow",
+        },
       ],
     },
     technologies: [
@@ -248,7 +335,11 @@ export const projects: Project[] = [
       "Coordinating a multi-step agent workflow — data intake, external OAuth, then multiple dependent API calls — so each step stays resilient and store-consistent.",
     ],
     links: {
-      github: { url: null, label: "GitHub", isPrivate: true },
+      github: {
+        url: null,
+        label: "GitHub",
+        isPrivate: true,
+      },
     },
   },
 ];

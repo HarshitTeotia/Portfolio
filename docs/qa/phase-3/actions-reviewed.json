@@ -1,0 +1,32 @@
+﻿[
+  {
+    "Repository": "actions/checkout",
+    "Tag": "v7.0.1",
+    "Runtime": "node24",
+    "URL": "https://github.com/actions/checkout/releases/tag/v7.0.1"
+  },
+  {
+    "Repository": "actions/setup-node",
+    "Tag": "v7.1.0",
+    "Runtime": "node24",
+    "URL": "https://github.com/actions/setup-node/releases/tag/v7.1.0"
+  },
+  {
+    "Repository": "actions/configure-pages",
+    "Tag": "v6.0.0",
+    "Runtime": "node24",
+    "URL": "https://github.com/actions/configure-pages/releases/tag/v6.0.0"
+  },
+  {
+    "Repository": "actions/upload-pages-artifact",
+    "Tag": "v5.0.0",
+    "Runtime": "",
+    "URL": "https://github.com/actions/upload-pages-artifact/releases/tag/v5.0.0"
+  },
+  {
+    "Repository": "actions/deploy-pages",
+    "Tag": "v5.0.1",
+    "Runtime": "node24",
+    "URL": "https://github.com/actions/deploy-pages/releases/tag/v5.0.1"
+  }
+]

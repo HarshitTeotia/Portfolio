@@ -1,0 +1,188 @@
+[
+  {
+    "kind": "mobile",
+    "lighthouse": "13.6.0",
+    "chromium": "153.0.8010.12",
+    "scores": {
+      "performance": 99,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": 1360.8769875194967,
+      "largest-contentful-paint": 1360.8769875194967,
+      "total-blocking-time": 121,
+      "cumulative-layout-shift": 0,
+      "speed-index": 1360.8769875194967
+    },
+    "resources": [
+      {
+        "resourceType": "total",
+        "label": "Total",
+        "requestCount": 14,
+        "transferSize": 882378
+      },
+      {
+        "resourceType": "script",
+        "label": "Script",
+        "requestCount": 8,
+        "transferSize": 614839
+      },
+      {
+        "resourceType": "font",
+        "label": "Font",
+        "requestCount": 3,
+        "transferSize": 111742
+      },
+      {
+        "resourceType": "document",
+        "label": "Document",
+        "requestCount": 1,
+        "transferSize": 81207
+      },
+      {
+        "resourceType": "stylesheet",
+        "label": "Stylesheet",
+        "requestCount": 1,
+        "transferSize": 48487
+      },
+      {
+        "resourceType": "other",
+        "label": "Other",
+        "requestCount": 1,
+        "transferSize": 26103
+      },
+      {
+        "resourceType": "image",
+        "label": "Image",
+        "requestCount": 0,
+        "transferSize": 0
+      },
+      {
+        "resourceType": "media",
+        "label": "Media",
+        "requestCount": 0,
+        "transferSize": 0
+      },
+      {
+        "resourceType": "third-party",
+        "label": "Third-party",
+        "requestCount": 0,
+        "transferSize": 0
+      }
+    ],
+    "settings": {
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "simulate",
+      "screen": {
+        "mobile": true,
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1.75,
+        "disabled": false
+      }
+    },
+    "conditions": "Single local headless run per preset against the uncompressed static preview; no browser regression suite running concurrently. Not deployed field data."
+  },
+  {
+    "kind": "desktop",
+    "lighthouse": "13.6.0",
+    "chromium": "153.0.8010.12",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": 291.8467743243674,
+      "largest-contentful-paint": 291.8467743243674,
+      "total-blocking-time": 0,
+      "cumulative-layout-shift": 0,
+      "speed-index": 324.76481704094476
+    },
+    "resources": [
+      {
+        "resourceType": "total",
+        "label": "Total",
+        "requestCount": 14,
+        "transferSize": 882378
+      },
+      {
+        "resourceType": "script",
+        "label": "Script",
+        "requestCount": 8,
+        "transferSize": 614839
+      },
+      {
+        "resourceType": "font",
+        "label": "Font",
+        "requestCount": 3,
+        "transferSize": 111742
+      },
+      {
+        "resourceType": "document",
+        "label": "Document",
+        "requestCount": 1,
+        "transferSize": 81207
+      },
+      {
+        "resourceType": "stylesheet",
+        "label": "Stylesheet",
+        "requestCount": 1,
+        "transferSize": 48487
+      },
+      {
+        "resourceType": "other",
+        "label": "Other",
+        "requestCount": 1,
+        "transferSize": 26103
+      },
+      {
+        "resourceType": "image",
+        "label": "Image",
+        "requestCount": 0,
+        "transferSize": 0
+      },
+      {
+        "resourceType": "media",
+        "label": "Media",
+        "requestCount": 0,
+        "transferSize": 0
+      },
+      {
+        "resourceType": "third-party",
+        "label": "Third-party",
+        "requestCount": 0,
+        "transferSize": 0
+      }
+    ],
+    "settings": {
+      "throttling": {
+        "rttMs": 40,
+        "throughputKbps": 10240,
+        "requestLatencyMs": 0,
+        "downloadThroughputKbps": 0,
+        "uploadThroughputKbps": 0,
+        "cpuSlowdownMultiplier": 1
+      },
+      "throttlingMethod": "simulate",
+      "screen": {
+        "mobile": false,
+        "width": 1350,
+        "height": 940,
+        "deviceScaleFactor": 1,
+        "disabled": false
+      }
+    },
+    "conditions": "Single local headless run per preset against the uncompressed static preview; no browser regression suite running concurrently. Not deployed field data."
+  }
+]

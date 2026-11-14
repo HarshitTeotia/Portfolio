@@ -6,7 +6,7 @@ import { ClipReveal } from "@/components/motion/ClipReveal";
 import { DrawLine } from "@/components/motion/DrawLine";
 import { duration, ease } from "@/lib/motion/tokens";
 
-/** "2020–2023" / "May 2025 – Present" → the first 4-digit year — the point
+/** "2020–2023" / "May 2025 – September 2026" → the first 4-digit year — the point
  * label the timeline actually shows, derived live from seasons.ts rather
  * than duplicating a hand-picked year per point. */
 function pointYear(dateRange: string): string {
@@ -18,6 +18,7 @@ function pointYear(dateRange: string): string {
  * compact (the degree short-form for school seasons, the season title for
  * the current, non-degree one). */
 function pointCaption(season: (typeof seasons)[number]): string {
+  if (season.id === "s01") return "BCA";
   if (season.id === "s03") return season.title.replace(/^The /i, "").toUpperCase();
   return season.roleOrDegree.split("—")[0].trim().toUpperCase();
 }

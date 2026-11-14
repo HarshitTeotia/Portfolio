@@ -7,6 +7,7 @@ export const categoryLabels: Record<TechnologyCategory, string> = {
   security: "Security & Auth",
   infrastructure: "Cloud & Infrastructure",
   quality: "Engineering & Quality",
+  frontend: "Frontend",
 };
 
 export const categoryOrder: TechnologyCategory[] = [
@@ -16,4 +17,5 @@ export const categoryOrder: TechnologyCategory[] = [
   "security",
   "infrastructure",
   "quality",
+  "frontend",
 ];

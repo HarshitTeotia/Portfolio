@@ -1,98 +1,67 @@
-import { Reveal } from "@/components/motion/Reveal";
-import { ClipReveal } from "@/components/motion/ClipReveal";
-import { Parallax } from "@/components/motion/Parallax";
-import { Button } from "@/components/ui";
+import { Button, Badge } from "@/components/ui";
 import { OrbitalField, GridBackdrop } from "@/components/decorative";
+import { getSocialLink } from "@/content/social";
 import { site } from "@/content/site";
 import { WatchTrailerButton } from "./WatchTrailerButton";
 import { StatusPill } from "./StatusPill";
 
 export function Hero() {
-  // "Harshit Teotia" → the dominant title, stored naturally cased — the
-  // uppercase treatment lives in the display classes below, not the data.
-  const [titleLine1, ...rest] = site.name.split(" ");
-  const titleLine2 = rest.join(" ");
-
+  const resume = getSocialLink("resume");
   return (
-    <section className="relative flex min-h-[92vh] flex-col justify-center overflow-hidden">
-      {/* Full-viewport background layer — a direct child of the unconstrained
-          section, not the max-w content wrapper below, so it spans the whole
-          width at any viewport size instead of stopping at the reading
-          column's edge (see the background-blending fix notes). */}
-      <Parallax range={14} className="pointer-events-none absolute inset-0 -z-20">
-        <div aria-hidden="true" className="absolute inset-0">
-          <GridBackdrop />
-          <OrbitalField
-            className="absolute inset-0 h-full w-full opacity-40"
-            align="right"
-          />
-        </div>
-      </Parallax>
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
-        <div className="bg-accent-600/10 animate-glow-drift absolute top-1/3 right-0 h-[520px] w-[720px] translate-x-1/3 -translate-y-1/2 rounded-full blur-[140px]" />
+    <section className="border-border relative isolate overflow-hidden border-b">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10 opacity-40"
+      >
+        <GridBackdrop />
+        <OrbitalField
+          className="absolute inset-y-0 right-0 hidden h-full w-1/2 opacity-40 md:block"
+          align="right"
+        />
       </div>
-
-      <div className="mx-auto w-full max-w-7xl px-6 py-28">
-        {/* Page-load sequence: metadata ~100ms, name ~250ms, title ~400ms,
-            role metadata ~600ms, CTA ~750ms — see the motion-pass brief. */}
-        <Reveal delay={0.1}>
-          <p className="text-accent-400 font-mono text-xs tracking-[0.35em] uppercase">
-            {site.eyebrow}
+      <div
+        aria-hidden="true"
+        className="bg-accent-600/10 pointer-events-none absolute top-0 right-0 -z-10 h-72 w-72 rounded-full blur-[90px] sm:h-96 sm:w-96"
+      />
+      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:px-8 sm:py-20 lg:grid-cols-[minmax(0,1fr)_19rem] lg:items-center lg:gap-16 lg:py-24">
+        <div className="min-w-0">
+          <p className="text-accent-300 font-mono text-xs tracking-[0.2em] uppercase">
+            {site.descriptor} / Engineering portfolio
           </p>
-        </Reveal>
-
-        <Reveal delay={0.25} className="mt-4">
-          <p className="text-text-secondary block font-mono text-sm tracking-[0.2em] uppercase sm:text-base">
-            {site.descriptor}
+          <p className="font-display mt-5 text-[clamp(2.75rem,6.5vw,6.25rem)] leading-none font-semibold tracking-tight uppercase">
+            {site.name}
           </p>
-        </Reveal>
-
-        <h1 className="mt-1">
-          <ClipReveal delay={0.4}>
-            <span className="font-display text-text-primary block text-7xl leading-[0.95] font-semibold tracking-tight uppercase">
-              {titleLine1}
-            </span>
-          </ClipReveal>
-          <ClipReveal delay={0.48}>
-            <span className="font-display text-text-primary block text-7xl leading-[0.95] font-semibold tracking-tight uppercase">
-              {titleLine2}
-            </span>
-          </ClipReveal>
-        </h1>
-
-        <div className="mt-12 grid grid-cols-1 items-end gap-10 lg:grid-cols-12">
-          <div className="lg:col-span-7">
-            <Reveal delay={0.6}>
-              <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-                {site.identityRoles.map((tag, index) => (
-                  <span key={tag} className="flex items-center gap-3">
-                    <span className="text-text-muted font-mono text-sm uppercase">
-                      {tag}
-                    </span>
-                    {index < site.identityRoles.length - 1 && (
-                      <span className="text-border-strong" aria-hidden="true">
-                        ·
-                      </span>
-                    )}
-                  </span>
-                ))}
-              </div>
-
-              <p className="text-text-secondary mt-5 max-w-xl text-lg">{site.tagline}</p>
-            </Reveal>
-
-            <Reveal delay={0.75} className="mt-8 flex flex-wrap gap-4">
-              <WatchTrailerButton />
-              <Button href="/projects" variant="ghost">
-                Explore Work
+          <h1 className="font-display text-text-primary mt-6 max-w-3xl text-[clamp(1.65rem,3vw,2.5rem)] leading-tight font-medium text-balance">
+            {site.headline}
+          </h1>
+          <p className="text-text-secondary mt-5 max-w-2xl text-base leading-relaxed sm:text-lg">
+            {site.summary}
+          </p>
+          <div aria-label="Core technologies" className="mt-6 flex flex-wrap gap-2">
+            {["FastAPI", "PostgreSQL", "RAG", "Google ADK"].map((name) => (
+              <Badge key={name}>{name}</Badge>
+            ))}
+          </div>
+          <div className="mt-8 flex flex-col gap-3 min-[390px]:flex-row min-[390px]:flex-wrap">
+            <Button href="/projects">
+              Explore Projects <span aria-hidden="true">→</span>
+            </Button>
+            {resume?.url && (
+              <Button href={resume.url} variant="ghost">
+                View Resume
               </Button>
-            </Reveal>
+            )}
+            <Button href="/contact" variant="ghost">
+              Contact Me
+            </Button>
           </div>
 
-          <Reveal delay={0.75} className="lg:col-span-4 lg:col-start-9">
-            <StatusPill />
-          </Reveal>
+          <div className="mt-5 flex items-center gap-3">
+            <WatchTrailerButton />
+            <span className="text-text-muted text-xs">Optional · 19 seconds</span>
+          </div>
         </div>
+        <StatusPill />
       </div>
     </section>
   );

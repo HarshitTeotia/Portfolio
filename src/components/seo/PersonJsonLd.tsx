@@ -19,14 +19,24 @@ export function PersonJsonLd() {
     "@type": "Person",
     name: site.name,
     url: siteUrl,
-    jobTitle: current?.role,
+    jobTitle: site.professionalTitle,
     worksFor: current
       ? {
           "@type": "Organization",
           name: current.company,
         }
       : undefined,
-    knowsAbout: [...site.positioning],
+    homeLocation: { "@type": "Place", name: site.location },
+    description: site.summary,
+    knowsAbout: [
+      "Python",
+      "FastAPI",
+      "REST APIs",
+      "PostgreSQL",
+      "LLM integrations",
+      "RAG",
+      "Google ADK",
+    ],
     ...(sameAs.length > 0 ? { sameAs } : {}),
   };
 

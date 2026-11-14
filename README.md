@@ -55,8 +55,8 @@ npm run start   # serves ./out locally (npx serve — no Node server involved)
 This repo builds as a static export and deploys via a GitHub Actions workflow at [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml). To enable it on a new fork/repo:
 
 1. In the repo's **Settings → Pages**, set **Source** to **GitHub Actions**.
-2. (Optional but recommended) In **Settings → Secrets and variables → Actions → Variables**, add a repository variable named `SITE_URL` set to the site's real published URL (e.g. `https://<owner>.github.io/<repo>`). Without it, the deployed site's metadata/sitemap/OG tags fall back to `http://localhost:3000` rather than guessing a URL.
-3. Push to `main` (or run the workflow manually from the **Actions** tab). The workflow typechecks, lints, tests, builds, and deploys automatically.
+2. (Optional but recommended) In **Settings → Secrets and variables → Actions → Variables**, add a repository variable named `SITE_URL` set to the site's real published URL (e.g. `https://<owner>.github.io/<repo>`). The default is the verified `https://harshitteotia.github.io/Portfolio` URL.
+3. Push changes to run CI. After reviewing the release report, manually run **Deploy to GitHub Pages** from Actions. Deployment is no longer triggered by a push.
 
 The site's base path (`/` vs. `/<repo-name>/`) is derived automatically at build time from the repository name — no manual configuration needed for the common case. See [`next.config.ts`](next.config.ts) and [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md#static-export--github-pages) for exactly how.
 
@@ -93,7 +93,23 @@ For a full architectural breakdown (route map, data flow, animation system, desi
 
 ## Notes
 
-- External links — GitHub, LinkedIn, and Resume — are intentionally left unset (`null`) in [`src/content/social.ts`](src/content/social.ts) until the real URLs/files are available. The UI renders a "coming soon" state for each until then; nothing is faked.
-- Set `NEXT_PUBLIC_SITE_URL` before deploying to production — it feeds `metadataBase`, Open Graph tags, `sitemap.xml`, and `robots.txt`.
+- GitHub, LinkedIn, email, and the existing resume path are set in `src/content/social.ts`. The current PDF matches the November 2026 profile; editable LaTeX source and build/verification instructions are in `resume/`.
+- `NEXT_PUBLIC_SITE_URL` optionally overrides the confirmed production URL; it feeds `metadataBase`, Open Graph tags, `sitemap.xml`, and `robots.txt`.
 - This is a fully static site — no backend, no API routes, no database, no server actions. `next/image` runs `unoptimized` (GitHub Pages has no image-optimization endpoint to call).
 - This repository has no dependency on any specific AI coding tool. `AGENTS.md` at the repo root is generated automatically by the Next.js dev server as general guidance for AI coding agents (of any kind) working in this codebase — it is not required to run, build, or test the app.
+
+## November 13, 2026 profile review
+
+Python Backend Developer | AI & GenAI Engineer. 17 months as a Python Developer at Vrozart Group, May 2025–September 2026, Mohali. Based in Bengaluru; available to join immediately and open to remote opportunities. See [Phase 1 report](docs/PHASE_1_REPORT.md) for audit findings, changed files, factual limitations, validation, and Phase 2 priorities.
+
+## Browser QA (Phase 2)
+
+Build with GITHUB_REPOSITORY=HarshitTeotia/Portfolio so the export matches production paths, install a test browser with `npx playwright install chromium`, then run `npm run test:e2e`. Playwright serves the literal export under `/Portfolio/` and checks all public content routes at six widths, dialog keyboard behavior, touch selection, links, hydration/console errors, and sampled WCAG A/AA rules with axe. The browser packages are development-only. An existing browser may be selected with `PLAYWRIGHT_CHROMIUM_EXECUTABLE`. For environments that require separate process management, start `node scripts/serve-export.mjs` and set `PLAYWRIGHT_EXTERNAL_SERVER=1`.
+
+The intro starts only through **Play Intro**. Phase 3 replaced the outdated PDF with a verified one-page LaTeX resume and removed the update-pending notices. See [Phase 2 report](docs/PHASE_2_REPORT.md) for actual results and remaining release work.
+
+## Phase 3 release readiness
+
+Next.js and its ESLint config are pinned to 16.4.6; React/React DOM remain 19.2.8. Vitest is patched to 5.0.3. Use Node 24 LTS (the engine range also permits supported Node 22.12+ and 26+). The public runtime dependency audit is clean; seven moderate TypeScript-ESLint/minimatch development-only findings remain documented without an incompatible override.
+
+Run `npm run verify:export` after the production-prefix build, and see [Phase 3 report](docs/PHASE_3_REPORT.md) for exact advisory decisions, measured performance, resume checks, and release status. There is one manual deployment workflow; no deployment was performed during modernization.

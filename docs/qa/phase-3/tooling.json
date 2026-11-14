@@ -1,0 +1,9 @@
+{
+  "node": "v24.14.0",
+  "compiler": "Official Tectonic 0.17.0 (XeTeX-based); source is PDFLaTeX-compatible",
+  "compilerArchiveSHA256": "F61CE51F0B0ADE1015B7DE7EF368541C5424E9756ECBD0D7AF97D6D48030845F",
+  "pdfjs": "6.5.438",
+  "canvas": "1.1.1",
+  "lighthouse": "13.6.0",
+  "chromium": "153.0.8010.12"
+}

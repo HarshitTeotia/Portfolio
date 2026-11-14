@@ -1,15 +1,15 @@
-import type { Metadata } from "next";
-import Link from "next/link";
+import { pageMetadata } from "@/lib/page-metadata";
+import Link from "@/components/ui/SiteLink";
 import { Badge, SectionHeading } from "@/components/ui";
 import { Stagger, StaggerItem } from "@/components/motion/Stagger";
 import { experience } from "@/content/experience";
 import { projects } from "@/content/projects";
 
-export const metadata: Metadata = {
-  title: "Experience — THE DEVELOPER",
-  description:
-    "Python Developer at Vrozart Group — backend APIs, AI/agent workflows, and real production debugging.",
-};
+export const metadata = pageMetadata(
+  "/experience/",
+  "Experience — Harshit Teotia",
+  "17 months as a Python Developer at Vrozart Group, May 2025–September 2026: FastAPI, PostgreSQL, applied AI, testing, and cross-functional development."
+);
 
 export default function ExperiencePage() {
   return (
@@ -58,6 +58,7 @@ export default function ExperiencePage() {
                     )}
                   </div>
                   <p className="text-accent-300 mt-1">{entry.company}</p>
+                  <p className="text-text-muted mt-1 text-sm">{entry.location}</p>
                 </StaggerItem>
                 <StaggerItem>
                   <p className="text-text-secondary mt-5 max-w-2xl">{entry.summary}</p>

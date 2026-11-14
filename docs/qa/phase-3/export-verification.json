@@ -1,0 +1,7 @@
+{
+  "routes": 11,
+  "localReferences": 397,
+  "scannedTextAssets": 102,
+  "secretScan": "Bounded high-confidence patterns; not an exhaustive confidentiality audit",
+  "failures": []
+}

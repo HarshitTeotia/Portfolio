@@ -11,9 +11,9 @@ describe("Header", () => {
     render(<Header />);
     for (const label of [
       "Home",
-      "Episodes",
+      "Career",
       "Projects",
-      "Tech",
+      "Technologies",
       "Experience",
       "About",
       "Contact",

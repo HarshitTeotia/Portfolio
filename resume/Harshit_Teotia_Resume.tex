@@ -1,0 +1,95 @@
+% Verified profile: November 13, 2026. Compile with PDFLaTeX or Tectonic.
+\documentclass[a4paper,10pt]{article}
+\usepackage[top=0.35in,bottom=0.35in,left=0.5in,right=0.5in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{iftex}
+\ifPDFTeX
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+\hypersetup{pdftitle={Harshit Teotia - Python Backend Developer and AI GenAI Engineer},pdfauthor={Harshit Teotia},pdfsubject={Technical Resume - November 2026}}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{1em}
+\titleformat{\section}{\normalsize\bfseries}{}{0pt}{}[\vspace{-3pt}\titlerule]
+\titlespacing*{\section}{0pt}{7pt}{5pt}
+\setlist[itemize]{leftmargin=12pt,label=\textbullet,itemsep=1pt,topsep=2pt,parsep=0pt,partopsep=0pt}
+\newcommand{\project}[2]{\vspace{3pt}\textbf{#1}\\{\small\textit{#2}}\vspace{1pt}}
+
+\begin{document}
+\begin{center}
+  {\Large\bfseries HARSHIT TEOTIA}\\[2pt]
+  \textbf{Python Backend Developer | AI \& GenAI Engineer}\\[3pt]
+  Bengaluru, India \enspace|\enspace Immediately available to join\\[2pt]
+  \href{mailto:harshitteotia2003@gmail.com}{harshitteotia2003@gmail.com}
+  \enspace|\enspace \href{https://www.linkedin.com/in/harshit-teotia/}{LinkedIn}
+  \enspace|\enspace \href{https://github.com/HarshitTeotia}{GitHub}
+  \enspace|\enspace \href{https://harshitteotia.github.io/Portfolio/}{Portfolio}
+\end{center}
+\vspace{-8pt}
+
+\section*{Professional Summary}
+Python Developer with 17 months of professional experience building FastAPI backends, REST APIs,
+PostgreSQL-backed business applications, and applied Generative AI workflows. Hands-on with LLM integrations,
+RAG, Google ADK conversational agents, document processing, backend validation, and React/API integration.
+
+\section*{Technical Skills}
+\textbf{Languages:} Python, SQL, JavaScript, TypeScript\\
+\textbf{Backend:} FastAPI, REST APIs, async programming, SQLAlchemy, Pydantic, JWT, RBAC, Alembic, Celery\\
+\textbf{Data \& AI:} PostgreSQL, MySQL, Redis, Qdrant, LLMs, RAG, embeddings, Google ADK, prompt engineering\\
+\textbf{Document Intelligence:} Tesseract OCR, PDFPlumber, document chunking, metadata extraction, vector retrieval\\
+\textbf{Frontend:} React, HTML, CSS, Tailwind CSS \quad \textbf{Testing:} Pytest, API/integration testing, Postman\\
+\textbf{Tools:} Git, GitHub, AWS S3, n8n, JIRA, ClickUp, Agile/Scrum
+
+\section*{Professional Experience}
+\textbf{Python Developer --- Vrozart Group} \hfill \textbf{May 2025 -- September 2026}\\
+\textit{Mohali, Punjab, India}
+\begin{itemize}
+  \item Developed Python/FastAPI REST APIs and PostgreSQL-backed business workflows with authentication,
+  JWT, RBAC, input validation, and business rules.
+  \item Integrated Google ADK conversational workflows and document/LLM processing; contributed to
+  React modules and frontend/API integration with frontend, QA, and product teams.
+  \item Wrote and executed automated backend tests and diagnosed failures. Supported an HRMS cross-functional
+  assignment covering requirements, user stories, acceptance criteria, and workflow documentation.
+\end{itemize}
+
+\section*{Key Projects}
+\project{MSME Lending \& AI-Powered Loan Management Platform}
+{Python, FastAPI, PostgreSQL, React, Google ADK, Qdrant, Celery, AWS S3, Tesseract OCR, PDFPlumber}
+\begin{itemize}
+  \item Developed and integrated backend APIs for loan applications and financial-document workflows;
+  supported structured data capture, backend validation, and Google ADK conversational application flows.
+  \item Worked on OCR/PDF extraction, chunking, metadata, embeddings, Qdrant retrieval, and RAG;
+  contributed React functionality and frontend/backend work involving approximately 40+ API integrations.
+  \item Reproduced and analyzed a PDF prompt-injection failure affecting financial-data integrity; proposed
+  instruction separation, retrieval grounding, and source validation at the document trust boundary.
+\end{itemize}
+
+\project{Van Sales \& Distribution ERP}
+{Python, FastAPI, PostgreSQL, asynchronous SQLAlchemy, Alembic, Pytest, JWT/RBAC}
+\begin{itemize}
+  \item Contributed across nine ERP modules, authorization across 16 roles, approval workflows,
+  backend validation, and audit logging.
+  \item Worked with 18 Alembic migrations; developed and executed 176+ automated tests and
+  investigated and resolved an asynchronous SQLAlchemy MissingGreenlet failure.
+\end{itemize}
+
+\project{HAUT: Hospitality Booking \& Operations Platform}
+{Python, FastAPI, PostgreSQL, Redis, Pydantic, REST APIs, authentication/RBAC}
+\begin{itemize}
+  \item Contributed booking and venue APIs, POS/billing and payment-related workflows, QR ordering,
+  kitchen display integration, inventory, and operational backend functionality.
+  \item Supported frontend/POS/KDS clients through API integration, authentication, RBAC, and validation.
+\end{itemize}
+
+\section*{Education}
+\textbf{Master of Computer Applications (MCA)} --- Chandigarh University \hfill 2023--2025\\
+Specialization: Artificial Intelligence \& Machine Learning\\[3pt]
+\textbf{Bachelor of Computer Applications (BCA)} --- Meerut Institute of Technology \hfill 2020--2023
+\end{document}

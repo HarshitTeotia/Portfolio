@@ -1,8 +1,10 @@
 "use client";
 
+import { useReducedMotion } from "@/lib/use-reduced-motion";
+
 import { useCallback, useEffect, useRef, useState } from "react";
-import { createPortal } from "react-dom";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { Modal } from "@/components/ui/Modal";
+import { AnimatePresence, motion } from "framer-motion";
 import { trailerScenes } from "@/content/trailer";
 import { site } from "@/content/site";
 import { duration, ease } from "@/lib/motion/tokens";
@@ -102,11 +104,6 @@ export function Trailer({ onComplete }: TrailerProps) {
     if (finishedRef.current) return;
     finishedRef.current = true;
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    try {
-      window.sessionStorage.setItem("trailer-seen", "1");
-    } catch {
-      // sessionStorage unavailable (private mode etc.) — trailer just replays next time.
-    }
     onComplete();
   }, [onComplete]);
 
@@ -123,16 +120,6 @@ export function Trailer({ onComplete }: TrailerProps) {
     };
   }, [sceneIndex, reducedMotion, finish]);
 
-  useEffect(() => {
-    function onKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape" || event.key === "Enter" || event.key === " ") {
-        finish();
-      }
-    }
-    window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
-  }, [finish]);
-
   const clampedIndex = Math.min(sceneIndex, trailerScenes.length - 1);
   const scene = trailerScenes[clampedIndex];
   const converged = scene.id === "identity";
@@ -142,42 +129,45 @@ export function Trailer({ onComplete }: TrailerProps) {
 
   const motionSpec = SCENE_MOTION[scene.id];
 
-  return createPortal(
-    <div
-      role="dialog"
-      aria-modal="true"
-      aria-label={`${site.name} intro`}
-      aria-live="polite"
-      onClick={finish}
-      className="bg-bg fixed inset-0 z-50 flex cursor-pointer flex-col items-center justify-center overflow-hidden px-6 text-center"
+  return (
+    <Modal
+      labelId="intro-title"
+      descriptionId="intro-description"
+      onClose={finish}
+      className="intro-dialog h-dvh w-screen max-w-none"
     >
-      <TrailerStage
-        converged={converged}
-        reducedMotion={reducedMotion}
-        minimal={scene.id === "boot" || scene.id === "timeline"}
-      />
-
-      <div className="absolute top-6 left-6">
-        <TrailerHud
-          scenes={trailerScenes}
-          activeIndex={clampedIndex}
-          totalMs={totalMs}
+      <div className="relative isolate flex h-full min-h-0 flex-col overflow-hidden px-5 py-4 sm:px-10 sm:py-6">
+        <header className="relative z-10 flex shrink-0 items-center justify-between gap-4">
+          <h2
+            id="intro-title"
+            className="text-text-secondary font-mono text-xs tracking-widest uppercase"
+          >
+            {site.name} / Intro
+          </h2>
+          <button
+            type="button"
+            autoFocus
+            onClick={finish}
+            className="border-border-strong min-h-11 shrink-0 rounded-md border px-4 text-sm whitespace-nowrap"
+          >
+            Close intro <span aria-hidden="true">×</span>
+          </button>
+        </header>
+        <p id="intro-description" className="sr-only">
+          An optional four-scene career introduction. Press Escape or use Close intro or
+          Skip intro to return to the portfolio.
+        </p>
+        <p role="status" className="sr-only">
+          Scene {clampedIndex + 1} of {trailerScenes.length}: {scene.hudLabel}
+        </p>
+        <TrailerStage
+          converged={converged}
           reducedMotion={reducedMotion}
+          minimal={scene.id === "boot" || scene.id === "timeline"}
         />
-      </div>
 
-      <button
-        type="button"
-        onClick={(event) => {
-          event.stopPropagation();
-          finish();
-        }}
-        className="border-border-strong text-text-secondary duration-fast ease-standard hover:text-text-primary absolute top-6 right-6 rounded-md border px-4 py-2 font-mono text-xs tracking-widest uppercase transition-colors"
-      >
-        Skip intro
-      </button>
-
-      {/* Deliberately no `mode="wait"` here: with it, this specific
+        <div className="relative flex min-h-0 flex-1 flex-col overflow-y-auto py-6">
+          {/* Deliberately no `mode="wait"` here: with it, this specific
           AnimatePresence + single-keyed-child setup never reaches its
           `animate` target — Framer Motion writes the `initial` inline style
           once and never updates it (verified: the element sits at its
@@ -186,27 +176,42 @@ export function Trailer({ onComplete }: TrailerProps) {
           animates correctly and lets consecutive scenes briefly cross-fade,
           which also reads better as "one continuous sequence" than a hard
           wait-then-cut. See the same fix applied inside ArchitectureMorph. */}
-      <AnimatePresence>
-        <motion.div
-          key={scene.id}
-          initial={reducedMotion ? { opacity: 0 } : motionSpec.initial}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={reducedMotion ? { opacity: 0 } : motionSpec.exit}
-          transition={{
-            duration: reducedMotion ? duration.fast : motionSpec.duration,
-            ease: reducedMotion ? ease.standard : motionSpec.ease,
-          }}
-          className="flex flex-col items-center"
-        >
-          <SceneContent scene={scene} reducedMotion={reducedMotion} compact={compact} />
-        </motion.div>
-      </AnimatePresence>
-
-      <p className="text-text-muted absolute bottom-8 font-mono text-xs">
-        Click, press Enter, or Skip intro to continue
-      </p>
-    </div>,
-    document.body
+          <AnimatePresence>
+            <motion.div
+              key={scene.id}
+              initial={reducedMotion ? { opacity: 0 } : motionSpec.initial}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={reducedMotion ? { opacity: 0 } : motionSpec.exit}
+              transition={{
+                duration: reducedMotion ? duration.fast : motionSpec.duration,
+                ease: reducedMotion ? ease.standard : motionSpec.ease,
+              }}
+              className="trailer-scene my-auto flex w-full shrink-0 flex-col items-center"
+            >
+              <SceneContent
+                scene={scene}
+                reducedMotion={reducedMotion}
+                compact={compact}
+              />
+            </motion.div>
+          </AnimatePresence>
+        </div>
+        <footer className="border-border relative z-10 flex shrink-0 items-end justify-between gap-4 border-t pt-4">
+          <TrailerHud
+            scenes={trailerScenes}
+            activeIndex={clampedIndex}
+            totalMs={totalMs}
+          />
+          <button
+            type="button"
+            onClick={finish}
+            className="text-accent-300 min-h-11 shrink-0 rounded-md px-3 text-sm"
+          >
+            Skip intro →
+          </button>
+        </footer>
+      </div>
+    </Modal>
   );
 }
 

@@ -1,6 +1,8 @@
 "use client";
 
-import { motion, useReducedMotion, type Variants } from "framer-motion";
+import { useReducedMotion } from "@/lib/use-reduced-motion";
+
+import { motion, type Variants } from "framer-motion";
 import { cn } from "@/lib/cn";
 import { duration, ease } from "@/lib/motion/tokens";
 

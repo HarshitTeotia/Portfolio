@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/ui/SiteLink";
 import { Badge, SectionHeading } from "@/components/ui";
 import { Reveal } from "@/components/motion/Reveal";
 import { technologies } from "@/content/technologies";

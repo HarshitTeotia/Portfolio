@@ -1,5 +1,6 @@
-import Link from "next/link";
+import Link from "@/components/ui/SiteLink";
 import { navItems } from "./nav-items";
+import { assetPath } from "@/lib/asset-path";
 import { socialLinks } from "@/content/social";
 import { site } from "@/content/site";
 
@@ -19,7 +20,7 @@ export function Footer() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-text-secondary hover:text-text-primary text-sm"
+              className="text-text-secondary hover:text-text-primary inline-flex min-h-11 items-center text-sm"
             >
               {item.label}
             </Link>
@@ -31,10 +32,10 @@ export function Footer() {
             link.url ? (
               <a
                 key={link.id}
-                href={link.url}
+                href={link.id === "resume" ? assetPath(link.url) : link.url}
                 target={link.id === "email" ? undefined : "_blank"}
                 rel={link.id === "email" ? undefined : "noopener noreferrer"}
-                className="text-text-secondary hover:text-accent-300 text-sm"
+                className="text-text-secondary hover:text-accent-300 inline-flex min-h-11 items-center text-sm"
               >
                 {link.label}
               </a>

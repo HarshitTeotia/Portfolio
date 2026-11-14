@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/ui/SiteLink";
 import { Badge, Card } from "@/components/ui";
 import { Stagger, StaggerItem } from "@/components/motion/Stagger";
 import { DrawLine } from "@/components/motion/DrawLine";
@@ -11,14 +11,18 @@ interface SeasonBlockProps {
 
 export function SeasonBlock({ season, projectEpisodes = [] }: SeasonBlockProps) {
   return (
-    <div className="border-border border-t py-16 first:border-t-0 first:pt-0">
+    <section
+      id={season.id}
+      aria-labelledby={season.id + "-title"}
+      className="border-border scroll-mt-24 border-t py-12 first:border-t-0 first:pt-0"
+    >
       <div className="grid gap-8 md:grid-cols-[auto_1fr]">
         <Stagger staggerDelay={0.1} amount={0.4}>
           <StaggerItem>
             <p className="text-text-muted font-mono text-xs tracking-[0.2em] uppercase">
               Season
             </p>
-            <p className="font-display text-accent-500/70 text-7xl leading-none">
+            <p className="font-display text-accent-300 text-5xl leading-none">
               {season.code}
             </p>
           </StaggerItem>
@@ -36,7 +40,10 @@ export function SeasonBlock({ season, projectEpisodes = [] }: SeasonBlockProps) 
               <p className="text-text-muted font-mono text-xs tracking-[0.2em] uppercase">
                 {season.dateRange}
               </p>
-              <h2 className="font-display text-text-primary mt-2 text-3xl sm:text-4xl">
+              <h2
+                id={season.id + "-title"}
+                className="font-display text-text-primary mt-2 text-3xl sm:text-4xl"
+              >
                 {season.title}
               </h2>
               <p className="text-accent-300 mt-1 text-sm">
@@ -54,7 +61,7 @@ export function SeasonBlock({ season, projectEpisodes = [] }: SeasonBlockProps) 
                   <Link
                     key={project.id}
                     href={`/projects/${project.slug}`}
-                    className="group"
+                    className="group rounded-lg"
                   >
                     <Card className="h-full">
                       <div className="flex items-center justify-between gap-2">
@@ -64,9 +71,6 @@ export function SeasonBlock({ season, projectEpisodes = [] }: SeasonBlockProps) 
                         >
                           {project.episodeLabel}
                         </Badge>
-                        {project.role.toLowerCase().includes("freelance") && (
-                          <Badge>Freelance</Badge>
-                        )}
                       </div>
                       <p className="font-display text-text-primary duration-base ease-standard mt-3 text-lg transition-colors group-hover:text-white">
                         {project.episodeTitle}
@@ -80,6 +84,6 @@ export function SeasonBlock({ season, projectEpisodes = [] }: SeasonBlockProps) 
           </Stagger>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

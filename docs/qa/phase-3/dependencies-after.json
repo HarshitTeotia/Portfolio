@@ -1,0 +1,288 @@
+﻿{
+  "version": "0.1.0",
+  "name": "the-developer-portfolio",
+  "dependencies": {
+    "@tailwindcss/postcss": {
+      "version": "4.3.3",
+      "resolved": "https://registry.npmjs.org/@tailwindcss/postcss/-/postcss-4.3.3.tgz",
+      "overridden": false,
+      "dependencies": {
+        "@tailwindcss/node": {
+          "version": "4.3.3",
+          "resolved": "https://registry.npmjs.org/@tailwindcss/node/-/node-4.3.3.tgz",
+          "overridden": false,
+          "dependencies": {
+            "source-map-js": {
+              "version": "1.2.2",
+              "resolved": "https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.2.tgz",
+              "overridden": false
+            }
+          }
+        },
+        "postcss": {
+          "version": "8.5.32",
+          "resolved": "https://registry.npmjs.org/postcss/-/postcss-8.5.32.tgz",
+          "overridden": false,
+          "dependencies": {
+            "source-map-js": {
+              "version": "1.2.2"
+            }
+          }
+        }
+      }
+    },
+    "@testing-library/jest-dom": {
+      "version": "7.0.1",
+      "resolved": "https://registry.npmjs.org/@testing-library/jest-dom/-/jest-dom-7.0.1.tgz",
+      "overridden": false,
+      "dependencies": {
+        "vitest": {
+          "version": "5.0.3"
+        }
+      }
+    },
+    "@testing-library/react": {
+      "version": "16.3.3",
+      "resolved": "https://registry.npmjs.org/@testing-library/react/-/react-16.3.3.tgz",
+      "overridden": false,
+      "dependencies": {
+        "react-dom": {
+          "version": "19.2.8"
+        },
+        "react": {
+          "version": "19.2.8"
+        }
+      }
+    },
+    "@vitejs/plugin-react": {
+      "version": "6.1.1",
+      "resolved": "https://registry.npmjs.org/@vitejs/plugin-react/-/plugin-react-6.1.1.tgz",
+      "overridden": false,
+      "dependencies": {
+        "vite": {
+          "version": "8.3.8",
+          "resolved": "https://registry.npmjs.org/vite/-/vite-8.3.8.tgz",
+          "overridden": false
+        }
+      }
+    },
+    "eslint-config-next": {
+      "version": "16.4.6",
+      "resolved": "https://registry.npmjs.org/eslint-config-next/-/eslint-config-next-16.4.6.tgz",
+      "overridden": false,
+      "dependencies": {
+        "eslint-plugin-import": {
+          "version": "2.32.0",
+          "resolved": "https://registry.npmjs.org/eslint-plugin-import/-/eslint-plugin-import-2.32.0.tgz",
+          "overridden": false,
+          "dependencies": {
+            "minimatch": {
+              "version": "3.1.5"
+            }
+          }
+        },
+        "eslint-plugin-jsx-a11y": {
+          "version": "6.10.2",
+          "resolved": "https://registry.npmjs.org/eslint-plugin-jsx-a11y/-/eslint-plugin-jsx-a11y-6.10.2.tgz",
+          "overridden": false,
+          "dependencies": {
+            "minimatch": {
+              "version": "3.1.5"
+            }
+          }
+        },
+        "eslint-plugin-react-hooks": {
+          "version": "7.1.1",
+          "resolved": "https://registry.npmjs.org/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-7.1.1.tgz",
+          "overridden": false,
+          "dependencies": {
+            "zod-validation-error": {
+              "version": "4.0.2",
+              "resolved": "https://registry.npmjs.org/zod-validation-error/-/zod-validation-error-4.0.2.tgz",
+              "overridden": false,
+              "dependencies": {
+                "zod": {
+                  "version": "4.6.7"
+                }
+              }
+            },
+            "zod": {
+              "version": "4.6.7",
+              "resolved": "https://registry.npmjs.org/zod/-/zod-4.6.7.tgz",
+              "overridden": false
+            }
+          }
+        },
+        "eslint-plugin-react": {
+          "version": "7.37.5",
+          "resolved": "https://registry.npmjs.org/eslint-plugin-react/-/eslint-plugin-react-7.37.5.tgz",
+          "overridden": false,
+          "dependencies": {
+            "minimatch": {
+              "version": "3.1.5"
+            }
+          }
+        },
+        "typescript-eslint": {
+          "version": "8.72.2",
+          "resolved": "https://registry.npmjs.org/typescript-eslint/-/typescript-eslint-8.72.2.tgz",
+          "overridden": false,
+          "dependencies": {
+            "@typescript-eslint/typescript-estree": {
+              "version": "8.72.2",
+              "resolved": "https://registry.npmjs.org/@typescript-eslint/typescript-estree/-/typescript-estree-8.72.2.tgz",
+              "overridden": false,
+              "dependencies": {
+                "minimatch": {
+                  "version": "10.2.6",
+                  "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-10.2.6.tgz",
+                  "overridden": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "eslint": {
+      "version": "9.39.5",
+      "resolved": "https://registry.npmjs.org/eslint/-/eslint-9.39.5.tgz",
+      "overridden": false,
+      "dependencies": {
+        "@eslint/config-array": {
+          "version": "0.21.2",
+          "resolved": "https://registry.npmjs.org/@eslint/config-array/-/config-array-0.21.2.tgz",
+          "overridden": false,
+          "dependencies": {
+            "minimatch": {
+              "version": "3.1.5"
+            }
+          }
+        },
+        "@eslint/eslintrc": {
+          "version": "3.3.7",
+          "resolved": "https://registry.npmjs.org/@eslint/eslintrc/-/eslintrc-3.3.7.tgz",
+          "overridden": false,
+          "dependencies": {
+            "minimatch": {
+              "version": "3.1.5"
+            }
+          }
+        },
+        "minimatch": {
+          "version": "3.1.5",
+          "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.1.5.tgz",
+          "overridden": false
+        }
+      }
+    },
+    "framer-motion": {
+      "version": "13.3.0",
+      "resolved": "https://registry.npmjs.org/framer-motion/-/framer-motion-13.3.0.tgz",
+      "overridden": false,
+      "dependencies": {
+        "react-dom": {
+          "version": "19.2.8"
+        },
+        "react": {
+          "version": "19.2.8"
+        }
+      }
+    },
+    "jsdom": {
+      "version": "29.1.1",
+      "resolved": "https://registry.npmjs.org/jsdom/-/jsdom-29.1.1.tgz",
+      "overridden": false,
+      "dependencies": {
+        "css-tree": {
+          "version": "3.2.1",
+          "resolved": "https://registry.npmjs.org/css-tree/-/css-tree-3.2.1.tgz",
+          "overridden": false,
+          "dependencies": {
+            "source-map-js": {
+              "version": "1.2.2"
+            }
+          }
+        },
+        "undici": {
+          "version": "7.30.2",
+          "resolved": "https://registry.npmjs.org/undici/-/undici-7.30.2.tgz",
+          "overridden": false
+        }
+      }
+    },
+    "next": {
+      "version": "16.4.6",
+      "resolved": "https://registry.npmjs.org/next/-/next-16.4.6.tgz",
+      "overridden": false,
+      "dependencies": {
+        "postcss": {
+          "version": "8.5.23",
+          "resolved": "https://registry.npmjs.org/postcss/-/postcss-8.5.23.tgz",
+          "overridden": false,
+          "dependencies": {
+            "source-map-js": {
+              "version": "1.2.2"
+            }
+          }
+        },
+        "react-dom": {
+          "version": "19.2.8"
+        },
+        "react": {
+          "version": "19.2.8"
+        },
+        "sharp": {
+          "version": "0.35.5",
+          "resolved": "https://registry.npmjs.org/sharp/-/sharp-0.35.5.tgz",
+          "overridden": false
+        },
+        "styled-jsx": {
+          "version": "5.1.6",
+          "resolved": "https://registry.npmjs.org/styled-jsx/-/styled-jsx-5.1.6.tgz",
+          "overridden": false,
+          "dependencies": {
+            "react": {
+              "version": "19.2.8"
+            }
+          }
+        }
+      }
+    },
+    "react-dom": {
+      "version": "19.2.8",
+      "resolved": "https://registry.npmjs.org/react-dom/-/react-dom-19.2.8.tgz",
+      "overridden": false,
+      "dependencies": {
+        "react": {
+          "version": "19.2.8"
+        }
+      }
+    },
+    "react": {
+      "version": "19.2.8",
+      "resolved": "https://registry.npmjs.org/react/-/react-19.2.8.tgz",
+      "overridden": false
+    },
+    "vitest": {
+      "version": "5.0.3",
+      "resolved": "https://registry.npmjs.org/vitest/-/vitest-5.0.3.tgz",
+      "overridden": false,
+      "dependencies": {
+        "@vitest/mocker": {
+          "version": "5.0.3",
+          "resolved": "https://registry.npmjs.org/@vitest/mocker/-/mocker-5.0.3.tgz",
+          "overridden": false,
+          "dependencies": {
+            "vite": {
+              "version": "8.3.8"
+            }
+          }
+        },
+        "vite": {
+          "version": "8.3.8"
+        }
+      }
+    }
+  }
+}

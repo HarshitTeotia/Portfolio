@@ -1,113 +1,127 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/ui/SiteLink";
 import { useState } from "react";
 import { technologies } from "@/content/technologies";
 import { categoryLabels, categoryOrder } from "@/content/categories";
 import { projects } from "@/content/projects";
-import { DrawLine } from "@/components/motion/DrawLine";
 import { cn } from "@/lib/cn";
 
-/**
- * An engineering capability map, not a tag cloud — technologies grouped by
- * concern (backend / database / AI / security / infrastructure / quality),
- * each group introduced by a thin drawn line rather than a bigger pill.
- * Hover or focus a technology and the projects that actually use it light up
- * in the side panel — the relationship is the point, not the badge.
- */
 export function TechMap() {
-  const [active, setActive] = useState<{ type: "tech" | "project"; id: string } | null>(
-    null
-  );
-
-  const activeTechIds = new Set<string>();
-  const activeProjectIds = new Set<string>();
-
-  if (active?.type === "tech") {
-    activeTechIds.add(active.id);
-    const tech = technologies.find((t) => t.id === active.id);
-    tech?.usedIn.forEach((id) => activeProjectIds.add(id));
-  } else if (active?.type === "project") {
-    activeProjectIds.add(active.id);
-    const project = projects.find((p) => p.id === active.id);
-    project?.technologies.forEach((id) => activeTechIds.add(id));
-  }
+  const [selected, setSelected] = useState<string | null>(null);
+  const [preview, setPreview] = useState<string | null>(null);
+  const active = preview ?? selected;
+  const technology = technologies.find((tech) => tech.id === active);
+  const related = technology
+    ? projects.filter((project) => technology.usedIn.includes(project.id))
+    : projects;
+  const chosen = technologies.find((tech) => tech.id === selected);
 
   return (
-    <div className="mt-14 grid gap-12 lg:grid-cols-[1fr_300px]">
-      <div className="flex flex-col gap-10">
-        {categoryOrder.map((category) => {
-          const items = technologies.filter((tech) => tech.category === category);
-          if (items.length === 0) return null;
-          return (
-            <div key={category}>
-              <div className="flex items-center gap-4">
-                <h2 className="text-accent-400 shrink-0 font-mono text-xs tracking-[0.2em] uppercase">
+    <section
+      className="mt-10"
+      aria-label="Technology explorer"
+      onKeyDown={(event) => {
+        if (event.key === "Escape") {
+          setSelected(null);
+          setPreview(null);
+        }
+      }}
+    >
+      <div className="border-border-strong mb-8 flex min-h-16 flex-wrap items-center justify-between gap-3 border-y py-3">
+        <p role="status" className="text-text-secondary text-sm">
+          {chosen
+            ? chosen.name + " · " + chosen.usedIn.length + " related projects"
+            : "Select a technology to explore its project connections."}
+        </p>
+        <button
+          type="button"
+          onClick={() => {
+            setSelected(null);
+            setPreview(null);
+          }}
+          disabled={!selected && !preview}
+          className="text-accent-300 disabled:text-text-muted min-h-11 rounded-md px-3 text-sm"
+        >
+          Reset selection
+        </button>
+      </div>
+      <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,1fr)_20rem]">
+        <div className="min-w-0 space-y-8">
+          {categoryOrder.map((category) => {
+            const items = technologies.filter((tech) => tech.category === category);
+            if (!items.length) return null;
+            return (
+              <div key={category}>
+                <h2 className="text-accent-300 text-sm font-medium">
                   {categoryLabels[category]}
                 </h2>
-                <DrawLine amount={0.6} />
-              </div>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {items.map((tech) => {
-                  const isDimmed = active !== null && !activeTechIds.has(tech.id);
-                  const isActive = activeTechIds.has(tech.id);
-                  return (
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {items.map((tech) => (
                     <button
                       key={tech.id}
                       type="button"
-                      onMouseEnter={() => setActive({ type: "tech", id: tech.id })}
-                      onFocus={() => setActive({ type: "tech", id: tech.id })}
-                      onMouseLeave={() => setActive(null)}
-                      onBlur={() => setActive(null)}
+                      aria-pressed={selected === tech.id}
+                      aria-controls="tech-projects"
+                      onClick={() => {
+                        setSelected(selected === tech.id ? null : tech.id);
+                        setPreview(null);
+                      }}
+                      onPointerEnter={(event) => {
+                        if (event.pointerType === "mouse") setPreview(tech.id);
+                      }}
+                      onPointerLeave={() => setPreview(null)}
+                      onFocus={() => setPreview(tech.id)}
+                      onBlur={() => setPreview(null)}
                       className={cn(
-                        "duration-base ease-standard inline-flex items-center rounded-full border px-3.5 py-1.5 font-mono text-xs tracking-wide uppercase transition-[opacity,color,border-color,background-color]",
-                        isActive
-                          ? "border-accent-400 bg-accent-600/15 text-accent-200"
-                          : "border-border-strong text-text-secondary hover:border-accent-500/50 hover:text-text-primary",
-                        isDimmed && "opacity-30"
+                        "min-h-11 max-w-full rounded-md border px-3 py-2 text-left text-sm transition-colors",
+                        active === tech.id
+                          ? "border-accent-400 bg-accent-600/15 text-accent-100"
+                          : "border-border-strong text-text-secondary hover:border-accent-400 hover:text-text-primary"
                       )}
                     >
                       {tech.name}
+                      {selected === tech.id && (
+                        <span aria-hidden="true" className="ml-2">
+                          ✓
+                        </span>
+                      )}
                     </button>
-                  );
-                })}
+                  ))}
+                </div>
               </div>
-            </div>
-          );
-        })}
-      </div>
-
-      <div className="border-border-strong h-fit border p-6 lg:sticky lg:top-24">
-        <p className="text-text-muted font-mono text-xs tracking-[0.2em] uppercase">
-          Projects
-        </p>
-        <div className="mt-4 flex flex-col gap-1">
-          {projects.map((project) => {
-            const isDimmed = active !== null && !activeProjectIds.has(project.id);
-            const isActive = activeProjectIds.has(project.id);
-            return (
-              <Link
-                key={project.id}
-                href={`/projects/${project.slug}`}
-                onMouseEnter={() => setActive({ type: "project", id: project.id })}
-                onFocus={() => setActive({ type: "project", id: project.id })}
-                onMouseLeave={() => setActive(null)}
-                onBlur={() => setActive(null)}
-                className={cn(
-                  "duration-base ease-standard border-border border-b py-3 text-sm transition-[opacity,color] last:border-b-0",
-                  isDimmed && "opacity-30",
-                  isActive ? "text-accent-300" : "text-text-secondary"
-                )}
-              >
-                {project.title}
-              </Link>
             );
           })}
         </div>
-        <p className="text-text-muted mt-4 border-t border-dashed pt-4 text-xs">
-          Hover or focus a technology to trace which projects use it.
-        </p>
+        <aside
+          id="tech-projects"
+          aria-label="Related projects"
+          className="border-border-strong bg-bg-elevated rounded-lg border p-5 lg:sticky lg:top-24"
+        >
+          <h2 className="text-accent-300 font-mono text-xs tracking-widest uppercase">
+            {technology ? technology.name + " / Projects" : "Project connections"}
+          </h2>
+          <ul className="divide-border mt-3 divide-y">
+            {related.map((project) => (
+              <li key={project.id}>
+                <Link
+                  href={"/projects/" + project.slug}
+                  className="text-text-primary hover:text-accent-300 block rounded-sm py-4 text-sm leading-relaxed"
+                >
+                  {project.title}
+                  <span aria-hidden="true" className="text-accent-300 ml-2">
+                    ↗
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <p className="text-text-muted mt-4 text-xs leading-relaxed">
+            Tap, click, or use Enter to keep a selection. Select it again or press Escape
+            to clear. Hover and keyboard focus preview a connection.
+          </p>
+        </aside>
       </div>
-    </div>
+    </section>
   );
 }

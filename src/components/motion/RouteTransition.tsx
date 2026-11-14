@@ -1,6 +1,8 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { useReducedMotion } from "@/lib/use-reduced-motion";
+
+import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
 import { duration, ease } from "@/lib/motion/tokens";
@@ -22,8 +24,8 @@ export function RouteTransition({ children }: { children: ReactNode }) {
   return (
     <motion.div
       key={pathname}
-      initial={{ opacity: 0, y: 8 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0.95 }}
+      animate={{ opacity: 1 }}
       transition={{ duration: duration.base, ease: ease.standard }}
     >
       {children}

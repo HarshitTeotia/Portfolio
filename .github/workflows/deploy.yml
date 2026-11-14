@@ -1,8 +1,7 @@
 name: Deploy to GitHub Pages
 
 on:
-  push:
-    branches: [main]
+  # Deployment is an explicit release action after reviewing the readiness report.
   workflow_dispatch:
 
 # GitHub Pages deployments need read access to the repo and write access to
@@ -22,16 +21,20 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7.0.1
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7.1.0
         with:
-          node-version: 20
+          node-version: 24
           cache: npm
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Audit dependencies
+        run: npm audit --audit-level=high
 
       - name: Typecheck
         run: npm run typecheck
@@ -43,16 +46,18 @@ jobs:
         run: npm run test
 
       - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6.0.0
 
       # Optional: set a repository variable named SITE_URL (Settings ->
       # Secrets and variables -> Actions -> Variables) to the site's real
       # published URL, e.g. https://<owner>.github.io/<repo>. Metadata,
-      # sitemap.xml, robots.txt, and JSON-LD all fall back to localhost if
-      # this isn't set, rather than fabricating a URL.
+      # sitemap.xml, robots.txt, and JSON-LD default to the verified
+      # https://harshitteotia.github.io/Portfolio URL when unset.
       - name: Resolve site URL
         if: vars.SITE_URL != ''
-        run: echo "NEXT_PUBLIC_SITE_URL=${{ vars.SITE_URL }}" >> "$GITHUB_ENV"
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
+        run: printf 'NEXT_PUBLIC_SITE_URL=%s\n' "$SITE_URL" >> "$GITHUB_ENV"
 
       - name: Build static export
         run: npm run build
@@ -60,13 +65,22 @@ jobs:
         # correct GitHub Pages base path from GITHUB_REPOSITORY (always
         # provided automatically) unless BASE_PATH is set here explicitly.
 
+      - name: Verify production export
+        run: npm run verify:export
+
+      - name: Install browser
+        run: npx playwright install --with-deps chromium
+
+      - name: Browser and accessibility regression tests
+        run: npm run test:e2e
+
       # GitHub Pages runs Jekyll by default, which ignores files/folders
       # starting with an underscore (e.g. Next's _next/ assets). This is a
       # build-output marker, not a repo file, so it isn't tracked by git.
       - name: Disable Jekyll processing
         run: touch out/.nojekyll
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5.0.0
         with:
           path: out
 
@@ -79,4 +93,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5.0.1

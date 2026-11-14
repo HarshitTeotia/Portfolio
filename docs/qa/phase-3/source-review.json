@@ -1,0 +1,5 @@
+{
+  "reviewedFiles": 86,
+  "highConfidenceCredentialPatternFiles": [],
+  "review": "Bounded source/config review plus anonymized project-content review; no private client code, customer records, internal service URLs, or exploit payloads found in authored portfolio content. Not an exhaustive secret-scanner certification."
+}
