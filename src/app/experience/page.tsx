@@ -82,8 +82,12 @@ export default function ExperiencePage() {
                     </p>
                     <div className="mt-3 flex flex-wrap gap-2">
                       {relatedProjects.map((project) => (
-                        <Link key={project.id} href={`/projects/${project.slug}`}>
-                          <Badge className="group-hover:border-border-strong group-hover:text-text-primary">
+                        <Link
+                          key={project.id}
+                          href={`/projects/${project.slug}`}
+                          className="group/project inline-flex min-h-11 items-center rounded-md"
+                        >
+                          <Badge className="group-hover/project:border-accent-400 group-hover/project:text-accent-300">
                             {project.title}
                           </Badge>
                         </Link>

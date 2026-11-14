@@ -50,7 +50,10 @@ export default function EpisodesPage() {
       </div>
       <p className="text-text-secondary mt-10">
         Additional case study:{" "}
-        <Link className="text-accent-300" href="/projects/van-sales-distribution-erp">
+        <Link
+          className="text-accent-300 inline-flex min-h-11 items-center"
+          href="/projects/van-sales-distribution-erp"
+        >
           Van Sales &amp; Distribution ERP
         </Link>
         .

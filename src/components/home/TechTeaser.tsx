@@ -17,7 +17,10 @@ export function TechTeaser() {
       </Reveal>
 
       <Reveal delay={0.15} className="mt-8">
-        <Link href="/tech" className="text-accent-300 hover:text-accent-400 text-sm">
+        <Link
+          href="/tech"
+          className="text-accent-300 hover:text-accent-400 inline-flex min-h-11 items-center text-sm"
+        >
           See how each technology connects to real projects →
         </Link>
       </Reveal>

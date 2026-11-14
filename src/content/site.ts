@@ -10,8 +10,9 @@ export const site = {
     "Python Developer with 17 months of professional experience building FastAPI backends, REST APIs, AI-powered document workflows, and business applications. Hands-on with Generative AI, LLM integrations, RAG pipelines, Google ADK agents, Qdrant, PostgreSQL, and cross-functional product development.",
   tagline: "Python backend systems, applied AI, and business software.",
   availability: "Available for Opportunities",
+  opportunityLocation: "Open to Opportunities Across India",
   availabilityDetail:
-    "Available to join immediately. Open to remote software engineering and AI engineering opportunities.",
+    "Available to join immediately. Open to relocation, on-site, hybrid, and remote opportunities.",
   location: "Bengaluru, India",
   identityRoles: ["Python Backend Developer", "AI & GenAI Engineer"],
   positioning: [

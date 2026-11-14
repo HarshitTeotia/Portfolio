@@ -6,7 +6,7 @@ export const about = {
   heroStatement: "Python Backend Developer | AI & GenAI Engineer",
 
   summary:
-    "I have 17 months of professional software development experience as a Python Developer at Vrozart Group (May 2025–September 2026), building FastAPI APIs, PostgreSQL-backed business workflows, and applied AI integrations. My work includes document intelligence, RAG, Google ADK agents, React contributions, and collaboration with frontend, QA, and product teams. I am based in Bengaluru, India, available to join immediately, and open to remote software engineering and AI engineering opportunities.",
+    "I have 17 months of professional software development experience as a Python Developer at Vrozart Group (May 2025–September 2026), building FastAPI APIs, PostgreSQL-backed business workflows, and applied AI integrations. My work includes document intelligence, RAG, Google ADK agents, React contributions, and collaboration with frontend, QA, and product teams. Bengaluru is my preferred location, and I am open to joining companies anywhere in India. I am available to join immediately and willing to relocate for on-site, hybrid, and remote opportunities.",
 
   whatIBuild: [
     {

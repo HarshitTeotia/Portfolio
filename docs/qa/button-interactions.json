@@ -1,0 +1,4602 @@
+{
+  "audited": "2026-11-14",
+  "browser": "Chromium 153.0.8010.12",
+  "widths": [320, 375, 390, 768, 1024, 1440],
+  "controls": 562,
+  "additionalConnectionStates": 36,
+  "viewportEntryExercises": 2808,
+  "playwright": {
+    "startTime": "2026-11-14T14:03:17.966Z",
+    "duration": 355506.056,
+    "expected": 36,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "file": "interaction-audit.spec.ts",
+      "title": "complete production control inventory and real clicks at 320px",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 80941
+        }
+      ]
+    },
+    {
+      "file": "interaction-audit.spec.ts",
+      "title": "complete production control inventory and real clicks at 375px",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 80861
+        }
+      ]
+    },
+    {
+      "file": "interaction-audit.spec.ts",
+      "title": "complete production control inventory and real clicks at 390px",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 80520
+        }
+      ]
+    },
+    {
+      "file": "interaction-audit.spec.ts",
+      "title": "complete production control inventory and real clicks at 768px",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 78444
+        }
+      ]
+    },
+    {
+      "file": "interaction-audit.spec.ts",
+      "title": "complete production control inventory and real clicks at 1024px",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 76723
+        }
+      ]
+    },
+    {
+      "file": "interaction-audit.spec.ts",
+      "title": "complete production control inventory and real clicks at 1440px",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 74903
+        }
+      ]
+    },
+    {
+      "file": "interaction-audit.spec.ts",
+      "title": "every technology with mouse, touch, Enter, Space and related links at 320px",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 22465
+        }
+      ]
+    },
+    {
+      "file": "interaction-audit.spec.ts",
+      "title": "every technology with mouse, touch, Enter, Space and related links at 375px",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 22948
+        }
+      ]
+    },
+    {
+      "file": "interaction-audit.spec.ts",
+      "title": "every technology with mouse, touch, Enter, Space and related links at 390px",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 22189
+        }
+      ]
+    },
+    {
+      "file": "interaction-audit.spec.ts",
+      "title": "every technology with mouse, touch, Enter, Space and related links at 768px",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 21889
+        }
+      ]
+    },
+    {
+      "file": "interaction-audit.spec.ts",
+      "title": "every technology with mouse, touch, Enter, Space and related links at 1024px",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 21380
+        }
+      ]
+    },
+    {
+      "file": "interaction-audit.spec.ts",
+      "title": "every technology with mouse, touch, Enter, Space and related links at 1440px",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 21811
+        }
+      ]
+    },
+    {
+      "file": "interaction-audit.spec.ts",
+      "title": "keyboard skip, visible focus, native activation and both modal focus cycles",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1464
+        }
+      ]
+    },
+    {
+      "file": "interaction-audit.spec.ts",
+      "title": "direct reload and browser Back/Forward preserve routes, anchors and active navigation",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 6575
+        }
+      ]
+    },
+    {
+      "file": "interaction-audit.spec.ts",
+      "title": "static badges, private-code labels, diagrams and card bodies have no false controls",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4468
+        }
+      ]
+    },
+    {
+      "file": "interaction-audit.spec.ts",
+      "title": "normal-motion reveals leave every page-specific navigation link clickable",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 19247
+        }
+      ]
+    },
+    {
+      "file": "interaction-audit.spec.ts",
+      "title": "Tab reaches every enabled control with visible focus at 390px",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 9303
+        }
+      ]
+    },
+    {
+      "file": "interaction-audit.spec.ts",
+      "title": "Tab reaches every enabled control with visible focus at 1440px",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 9787
+        }
+      ]
+    },
+    {
+      "file": "interaction-audit.spec.ts",
+      "title": "touch activates every mobile menu destination and both intro dismiss controls",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 8163
+        }
+      ]
+    },
+    {
+      "file": "portfolio.spec.ts",
+      "title": "development-only design showcase is absent from production content",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 17
+        }
+      ]
+    },
+    {
+      "file": "portfolio.spec.ts",
+      "title": "current resume is served intact at the production path and every resume CTA agrees",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 548
+        }
+      ]
+    },
+    {
+      "file": "portfolio.spec.ts",
+      "title": "public routes fit 320px",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1825
+        }
+      ]
+    },
+    {
+      "file": "portfolio.spec.ts",
+      "title": "public routes fit 375px",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1751
+        }
+      ]
+    },
+    {
+      "file": "portfolio.spec.ts",
+      "title": "public routes fit 390px",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2429
+        }
+      ]
+    },
+    {
+      "file": "portfolio.spec.ts",
+      "title": "public routes fit 768px",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2473
+        }
+      ]
+    },
+    {
+      "file": "portfolio.spec.ts",
+      "title": "public routes fit 1024px",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2348
+        }
+      ]
+    },
+    {
+      "file": "portfolio.spec.ts",
+      "title": "public routes fit 1440px",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2800
+        }
+      ]
+    },
+    {
+      "file": "portfolio.spec.ts",
+      "title": "intro is opt-in, traps focus, restores focus, and replays from the first scene",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1539
+        }
+      ]
+    },
+    {
+      "file": "portfolio.spec.ts",
+      "title": "reduced-motion intro completes and mobile controls stay usable",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 11131
+        }
+      ]
+    },
+    {
+      "file": "portfolio.spec.ts",
+      "title": "mobile navigation supports keyboard, route changes, resize, and active state",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 829
+        }
+      ]
+    },
+    {
+      "file": "portfolio.spec.ts",
+      "title": "touch technology selection persists and can be reset",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 658
+        }
+      ]
+    },
+    {
+      "file": "portfolio.spec.ts",
+      "title": "case-study links, section anchors, assets, and next navigation work",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1010
+        }
+      ]
+    },
+    {
+      "file": "portfolio.spec.ts",
+      "title": "normal intro progresses through all scenes and fits a short landscape viewport",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1091
+        }
+      ]
+    },
+    {
+      "file": "portfolio.spec.ts",
+      "title": "public navigation has no console, hydration, or failed local requests",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1715
+        }
+      ]
+    },
+    {
+      "file": "portfolio.spec.ts",
+      "title": "homepage identity and primary actions are usable without JavaScript",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 515
+        }
+      ]
+    },
+    {
+      "file": "portfolio.spec.ts",
+      "title": "public pages and dialogs have no automated WCAG A/AA violations",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 6893
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "page": "/",
+      "element": "Footer / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/",
+      "element": "Footer / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/",
+      "element": "Footer / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/",
+      "element": "Footer / Email",
+      "expected": "Browser dispatched mailto:harshitteotia2003@gmail.com; OS mail client not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/",
+      "element": "Footer / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/",
+      "element": "Footer / GitHub",
+      "expected": "New tab requested https://github.com/HarshitTeotia; remote reachability not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/",
+      "element": "Footer / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/",
+      "element": "Footer / LinkedIn",
+      "expected": "New tab requested https://www.linkedin.com/in/harshit-teotia/; remote reachability not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/",
+      "element": "Footer / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/",
+      "element": "Footer / Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/",
+      "element": "Footer / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/",
+      "element": "Header / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/",
+      "element": "Header / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/",
+      "element": "Header / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/",
+      "element": "Header / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/",
+      "element": "Header / Harshit Teotia",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/",
+      "element": "Header / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/",
+      "element": "Header / Open menu",
+      "expected": "Open / close dialog, restore focus, unlock body",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/",
+      "element": "Header / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/",
+      "element": "Header / Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/",
+      "element": "Header / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/",
+      "element": "Intro / Close intro",
+      "expected": "Dismiss intro and restore Play Intro focus",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/",
+      "element": "Intro / Skip intro",
+      "expected": "Dismiss intro and restore Play Intro focus",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/",
+      "element": "Layout / Skip to content",
+      "expected": "Scrolled to and focused #main-content",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/",
+      "element": "Main / Contact Me",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/",
+      "element": "Main / Explore all projects, including Viblets →",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/",
+      "element": "Main / Explore Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/",
+      "element": "Main / Play Intro",
+      "expected": "Open optional intro from scene 1; replay after dismissal",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/",
+      "element": "Main / See how each technology connects to real projects →",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/",
+      "element": "Main / View case study: HAUT: Hospitality Booking & Operations Platform",
+      "expected": "Opened /Portfolio/projects/haut/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/",
+      "element": "Main / View case study: MSME Lending & AI-Powered Loan Management Platform",
+      "expected": "Opened /Portfolio/projects/vrozart-finance/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/",
+      "element": "Main / View case study: Van Sales & Distribution ERP",
+      "expected": "Opened /Portfolio/projects/van-sales-distribution-erp/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/",
+      "element": "Main / View Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/",
+      "element": "Mobile navigation / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/",
+      "element": "Mobile navigation / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/",
+      "element": "Mobile navigation / Close menu",
+      "expected": "Open / close dialog, restore focus, unlock body",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/",
+      "element": "Mobile navigation / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/",
+      "element": "Mobile navigation / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/",
+      "element": "Mobile navigation / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/",
+      "element": "Mobile navigation / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/",
+      "element": "Mobile navigation / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/",
+      "element": "Mobile navigation / View Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/_not-found/",
+      "element": "Footer / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/_not-found/",
+      "element": "Footer / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/_not-found/",
+      "element": "Footer / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/_not-found/",
+      "element": "Footer / Email",
+      "expected": "Browser dispatched mailto:harshitteotia2003@gmail.com; OS mail client not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/_not-found/",
+      "element": "Footer / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/_not-found/",
+      "element": "Footer / GitHub",
+      "expected": "New tab requested https://github.com/HarshitTeotia; remote reachability not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/_not-found/",
+      "element": "Footer / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/_not-found/",
+      "element": "Footer / LinkedIn",
+      "expected": "New tab requested https://www.linkedin.com/in/harshit-teotia/; remote reachability not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/_not-found/",
+      "element": "Footer / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/_not-found/",
+      "element": "Footer / Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/_not-found/",
+      "element": "Footer / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/_not-found/",
+      "element": "Header / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/_not-found/",
+      "element": "Header / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/_not-found/",
+      "element": "Header / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/_not-found/",
+      "element": "Header / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/_not-found/",
+      "element": "Header / Harshit Teotia",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/_not-found/",
+      "element": "Header / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/_not-found/",
+      "element": "Header / Open menu",
+      "expected": "Open / close dialog, restore focus, unlock body",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/_not-found/",
+      "element": "Header / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/_not-found/",
+      "element": "Header / Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/_not-found/",
+      "element": "Header / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/_not-found/",
+      "element": "Layout / Skip to content",
+      "expected": "Scrolled to and focused #main-content",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/_not-found/",
+      "element": "Main / Back to Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/_not-found/",
+      "element": "Main / View Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/_not-found/",
+      "element": "Mobile navigation / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/_not-found/",
+      "element": "Mobile navigation / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/_not-found/",
+      "element": "Mobile navigation / Close menu",
+      "expected": "Open / close dialog, restore focus, unlock body",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/_not-found/",
+      "element": "Mobile navigation / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/_not-found/",
+      "element": "Mobile navigation / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/_not-found/",
+      "element": "Mobile navigation / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/_not-found/",
+      "element": "Mobile navigation / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/_not-found/",
+      "element": "Mobile navigation / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/_not-found/",
+      "element": "Mobile navigation / View Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/404.html",
+      "element": "Footer / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/404.html",
+      "element": "Footer / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/404.html",
+      "element": "Footer / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/404.html",
+      "element": "Footer / Email",
+      "expected": "Browser dispatched mailto:harshitteotia2003@gmail.com; OS mail client not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/404.html",
+      "element": "Footer / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/404.html",
+      "element": "Footer / GitHub",
+      "expected": "New tab requested https://github.com/HarshitTeotia; remote reachability not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/404.html",
+      "element": "Footer / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/404.html",
+      "element": "Footer / LinkedIn",
+      "expected": "New tab requested https://www.linkedin.com/in/harshit-teotia/; remote reachability not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/404.html",
+      "element": "Footer / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/404.html",
+      "element": "Footer / Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/404.html",
+      "element": "Footer / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/404.html",
+      "element": "Header / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/404.html",
+      "element": "Header / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/404.html",
+      "element": "Header / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/404.html",
+      "element": "Header / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/404.html",
+      "element": "Header / Harshit Teotia",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/404.html",
+      "element": "Header / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/404.html",
+      "element": "Header / Open menu",
+      "expected": "Open / close dialog, restore focus, unlock body",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/404.html",
+      "element": "Header / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/404.html",
+      "element": "Header / Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/404.html",
+      "element": "Header / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/404.html",
+      "element": "Layout / Skip to content",
+      "expected": "Scrolled to and focused #main-content",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/404.html",
+      "element": "Main / Back to Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/404.html",
+      "element": "Main / View Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/404.html",
+      "element": "Mobile navigation / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/404.html",
+      "element": "Mobile navigation / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/404.html",
+      "element": "Mobile navigation / Close menu",
+      "expected": "Open / close dialog, restore focus, unlock body",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/404.html",
+      "element": "Mobile navigation / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/404.html",
+      "element": "Mobile navigation / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/404.html",
+      "element": "Mobile navigation / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/404.html",
+      "element": "Mobile navigation / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/404.html",
+      "element": "Mobile navigation / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/404.html",
+      "element": "Mobile navigation / View Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/404/",
+      "element": "Footer / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/404/",
+      "element": "Footer / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/404/",
+      "element": "Footer / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/404/",
+      "element": "Footer / Email",
+      "expected": "Browser dispatched mailto:harshitteotia2003@gmail.com; OS mail client not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/404/",
+      "element": "Footer / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/404/",
+      "element": "Footer / GitHub",
+      "expected": "New tab requested https://github.com/HarshitTeotia; remote reachability not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/404/",
+      "element": "Footer / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/404/",
+      "element": "Footer / LinkedIn",
+      "expected": "New tab requested https://www.linkedin.com/in/harshit-teotia/; remote reachability not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/404/",
+      "element": "Footer / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/404/",
+      "element": "Footer / Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/404/",
+      "element": "Footer / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/404/",
+      "element": "Header / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/404/",
+      "element": "Header / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/404/",
+      "element": "Header / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/404/",
+      "element": "Header / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/404/",
+      "element": "Header / Harshit Teotia",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/404/",
+      "element": "Header / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/404/",
+      "element": "Header / Open menu",
+      "expected": "Open / close dialog, restore focus, unlock body",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/404/",
+      "element": "Header / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/404/",
+      "element": "Header / Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/404/",
+      "element": "Header / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/404/",
+      "element": "Layout / Skip to content",
+      "expected": "Scrolled to and focused #main-content",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/404/",
+      "element": "Main / Back to Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/404/",
+      "element": "Main / View Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/404/",
+      "element": "Mobile navigation / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/404/",
+      "element": "Mobile navigation / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/404/",
+      "element": "Mobile navigation / Close menu",
+      "expected": "Open / close dialog, restore focus, unlock body",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/404/",
+      "element": "Mobile navigation / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/404/",
+      "element": "Mobile navigation / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/404/",
+      "element": "Mobile navigation / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/404/",
+      "element": "Mobile navigation / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/404/",
+      "element": "Mobile navigation / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/404/",
+      "element": "Mobile navigation / View Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/about/",
+      "element": "Footer / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/about/",
+      "element": "Footer / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/about/",
+      "element": "Footer / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/about/",
+      "element": "Footer / Email",
+      "expected": "Browser dispatched mailto:harshitteotia2003@gmail.com; OS mail client not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/about/",
+      "element": "Footer / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/about/",
+      "element": "Footer / GitHub",
+      "expected": "New tab requested https://github.com/HarshitTeotia; remote reachability not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/about/",
+      "element": "Footer / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/about/",
+      "element": "Footer / LinkedIn",
+      "expected": "New tab requested https://www.linkedin.com/in/harshit-teotia/; remote reachability not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/about/",
+      "element": "Footer / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/about/",
+      "element": "Footer / Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/about/",
+      "element": "Footer / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/about/",
+      "element": "Header / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/about/",
+      "element": "Header / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/about/",
+      "element": "Header / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/about/",
+      "element": "Header / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/about/",
+      "element": "Header / Harshit Teotia",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/about/",
+      "element": "Header / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/about/",
+      "element": "Header / Open menu",
+      "expected": "Open / close dialog, restore focus, unlock body",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/about/",
+      "element": "Header / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/about/",
+      "element": "Header / Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/about/",
+      "element": "Header / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/about/",
+      "element": "Layout / Skip to content",
+      "expected": "Scrolled to and focused #main-content",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/about/",
+      "element": "Main / HAUT: Hospitality Booking & Operations PlatformHospitality Operations / Backend Systems",
+      "expected": "Opened /Portfolio/projects/haut/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/about/",
+      "element": "Main / MSME Lending & AI-Powered Loan Management PlatformBackend Engineering / Applied AI & Document Intelligence",
+      "expected": "Opened /Portfolio/projects/vrozart-finance/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/about/",
+      "element": "Main / See the full timeline →",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/about/",
+      "element": "Main / Van Sales & Distribution ERPMulti-Tenant Backend Engineering / ERP Systems",
+      "expected": "Opened /Portfolio/projects/van-sales-distribution-erp/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/about/",
+      "element": "Main / VibletsAI / Agentic Marketing Automation Platform",
+      "expected": "Opened /Portfolio/projects/viblets/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/about/",
+      "element": "Mobile navigation / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/about/",
+      "element": "Mobile navigation / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/about/",
+      "element": "Mobile navigation / Close menu",
+      "expected": "Open / close dialog, restore focus, unlock body",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/about/",
+      "element": "Mobile navigation / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/about/",
+      "element": "Mobile navigation / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/about/",
+      "element": "Mobile navigation / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/about/",
+      "element": "Mobile navigation / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/about/",
+      "element": "Mobile navigation / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/about/",
+      "element": "Mobile navigation / View Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/contact/",
+      "element": "Footer / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/contact/",
+      "element": "Footer / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/contact/",
+      "element": "Footer / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/contact/",
+      "element": "Footer / Email",
+      "expected": "Browser dispatched mailto:harshitteotia2003@gmail.com; OS mail client not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/contact/",
+      "element": "Footer / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/contact/",
+      "element": "Footer / GitHub",
+      "expected": "New tab requested https://github.com/HarshitTeotia; remote reachability not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/contact/",
+      "element": "Footer / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/contact/",
+      "element": "Footer / LinkedIn",
+      "expected": "New tab requested https://www.linkedin.com/in/harshit-teotia/; remote reachability not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/contact/",
+      "element": "Footer / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/contact/",
+      "element": "Footer / Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/contact/",
+      "element": "Footer / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/contact/",
+      "element": "Header / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/contact/",
+      "element": "Header / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/contact/",
+      "element": "Header / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/contact/",
+      "element": "Header / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/contact/",
+      "element": "Header / Harshit Teotia",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/contact/",
+      "element": "Header / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/contact/",
+      "element": "Header / Open menu",
+      "expected": "Open / close dialog, restore focus, unlock body",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/contact/",
+      "element": "Header / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/contact/",
+      "element": "Header / Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/contact/",
+      "element": "Header / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/contact/",
+      "element": "Layout / Skip to content",
+      "expected": "Scrolled to and focused #main-content",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/contact/",
+      "element": "Main / Emailharshitteotia2003@gmail.com",
+      "expected": "Browser dispatched mailto:harshitteotia2003@gmail.com; OS mail client not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/contact/",
+      "element": "Main / GitHubOpen",
+      "expected": "New tab requested https://github.com/HarshitTeotia; remote reachability not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/contact/",
+      "element": "Main / LinkedInOpen",
+      "expected": "New tab requested https://www.linkedin.com/in/harshit-teotia/; remote reachability not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/contact/",
+      "element": "Main / ResumeView PDF",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/contact/",
+      "element": "Mobile navigation / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/contact/",
+      "element": "Mobile navigation / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/contact/",
+      "element": "Mobile navigation / Close menu",
+      "expected": "Open / close dialog, restore focus, unlock body",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/contact/",
+      "element": "Mobile navigation / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/contact/",
+      "element": "Mobile navigation / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/contact/",
+      "element": "Mobile navigation / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/contact/",
+      "element": "Mobile navigation / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/contact/",
+      "element": "Mobile navigation / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/contact/",
+      "element": "Mobile navigation / View Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/dev/design-system/",
+      "element": "Footer / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/dev/design-system/",
+      "element": "Footer / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/dev/design-system/",
+      "element": "Footer / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/dev/design-system/",
+      "element": "Footer / Email",
+      "expected": "Browser dispatched mailto:harshitteotia2003@gmail.com; OS mail client not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/dev/design-system/",
+      "element": "Footer / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/dev/design-system/",
+      "element": "Footer / GitHub",
+      "expected": "New tab requested https://github.com/HarshitTeotia; remote reachability not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/dev/design-system/",
+      "element": "Footer / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/dev/design-system/",
+      "element": "Footer / LinkedIn",
+      "expected": "New tab requested https://www.linkedin.com/in/harshit-teotia/; remote reachability not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/dev/design-system/",
+      "element": "Footer / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/dev/design-system/",
+      "element": "Footer / Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/dev/design-system/",
+      "element": "Footer / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/dev/design-system/",
+      "element": "Header / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/dev/design-system/",
+      "element": "Header / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/dev/design-system/",
+      "element": "Header / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/dev/design-system/",
+      "element": "Header / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/dev/design-system/",
+      "element": "Header / Harshit Teotia",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/dev/design-system/",
+      "element": "Header / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/dev/design-system/",
+      "element": "Header / Open menu",
+      "expected": "Open / close dialog, restore focus, unlock body",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/dev/design-system/",
+      "element": "Header / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/dev/design-system/",
+      "element": "Header / Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/dev/design-system/",
+      "element": "Header / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/dev/design-system/",
+      "element": "Layout / Skip to content",
+      "expected": "Scrolled to and focused #main-content",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/dev/design-system/",
+      "element": "Main / Back to Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/dev/design-system/",
+      "element": "Main / View Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/dev/design-system/",
+      "element": "Mobile navigation / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/dev/design-system/",
+      "element": "Mobile navigation / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/dev/design-system/",
+      "element": "Mobile navigation / Close menu",
+      "expected": "Open / close dialog, restore focus, unlock body",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/dev/design-system/",
+      "element": "Mobile navigation / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/dev/design-system/",
+      "element": "Mobile navigation / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/dev/design-system/",
+      "element": "Mobile navigation / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/dev/design-system/",
+      "element": "Mobile navigation / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/dev/design-system/",
+      "element": "Mobile navigation / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/dev/design-system/",
+      "element": "Mobile navigation / View Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Footer / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Footer / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Footer / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Footer / Email",
+      "expected": "Browser dispatched mailto:harshitteotia2003@gmail.com; OS mail client not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Footer / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Footer / GitHub",
+      "expected": "New tab requested https://github.com/HarshitTeotia; remote reachability not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Footer / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Footer / LinkedIn",
+      "expected": "New tab requested https://www.linkedin.com/in/harshit-teotia/; remote reachability not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Footer / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Footer / Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Footer / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Header / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Header / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Header / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Header / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Header / Harshit Teotia",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Header / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Header / Open menu",
+      "expected": "Open / close dialog, restore focus, unlock body",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Header / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Header / Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Header / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Layout / Skip to content",
+      "expected": "Scrolled to and focused #main-content",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Main / EP 04Teaching an Agent to SellViblets",
+      "expected": "Opened /Portfolio/projects/viblets/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Main / EP 05Running the FloorHAUT: Hospitality Booking & Operations Platform",
+      "expected": "Opened /Portfolio/projects/haut/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Main / EP 06Reading Between the LinesMSME Lending & AI-Powered Loan Management Platform",
+      "expected": "Opened /Portfolio/projects/vrozart-finance/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Main / S01 · The Beginning",
+      "expected": "Scrolled to #s01 below sticky header",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Main / S02 · The Builder",
+      "expected": "Scrolled to #s02 below sticky header",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Main / S03 · The Real World",
+      "expected": "Scrolled to #s03 below sticky header",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Main / Van Sales & Distribution ERP",
+      "expected": "Opened /Portfolio/projects/van-sales-distribution-erp/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Mobile navigation / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Mobile navigation / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Mobile navigation / Close menu",
+      "expected": "Open / close dialog, restore focus, unlock body",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Mobile navigation / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Mobile navigation / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Mobile navigation / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Mobile navigation / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Mobile navigation / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/episodes/",
+      "element": "Mobile navigation / View Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/experience/",
+      "element": "Footer / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/experience/",
+      "element": "Footer / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/experience/",
+      "element": "Footer / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/experience/",
+      "element": "Footer / Email",
+      "expected": "Browser dispatched mailto:harshitteotia2003@gmail.com; OS mail client not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/experience/",
+      "element": "Footer / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/experience/",
+      "element": "Footer / GitHub",
+      "expected": "New tab requested https://github.com/HarshitTeotia; remote reachability not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/experience/",
+      "element": "Footer / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/experience/",
+      "element": "Footer / LinkedIn",
+      "expected": "New tab requested https://www.linkedin.com/in/harshit-teotia/; remote reachability not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/experience/",
+      "element": "Footer / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/experience/",
+      "element": "Footer / Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/experience/",
+      "element": "Footer / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/experience/",
+      "element": "Header / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/experience/",
+      "element": "Header / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/experience/",
+      "element": "Header / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/experience/",
+      "element": "Header / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/experience/",
+      "element": "Header / Harshit Teotia",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/experience/",
+      "element": "Header / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/experience/",
+      "element": "Header / Open menu",
+      "expected": "Open / close dialog, restore focus, unlock body",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/experience/",
+      "element": "Header / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/experience/",
+      "element": "Header / Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/experience/",
+      "element": "Header / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/experience/",
+      "element": "Layout / Skip to content",
+      "expected": "Scrolled to and focused #main-content",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/experience/",
+      "element": "Main / HAUT: Hospitality Booking & Operations Platform",
+      "expected": "Opened /Portfolio/projects/haut/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/experience/",
+      "element": "Main / MSME Lending & AI-Powered Loan Management Platform",
+      "expected": "Opened /Portfolio/projects/vrozart-finance/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/experience/",
+      "element": "Main / Viblets",
+      "expected": "Opened /Portfolio/projects/viblets/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/experience/",
+      "element": "Mobile navigation / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/experience/",
+      "element": "Mobile navigation / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/experience/",
+      "element": "Mobile navigation / Close menu",
+      "expected": "Open / close dialog, restore focus, unlock body",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/experience/",
+      "element": "Mobile navigation / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/experience/",
+      "element": "Mobile navigation / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/experience/",
+      "element": "Mobile navigation / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/experience/",
+      "element": "Mobile navigation / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/experience/",
+      "element": "Mobile navigation / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/experience/",
+      "element": "Mobile navigation / View Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/",
+      "element": "Footer / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/",
+      "element": "Footer / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/",
+      "element": "Footer / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/",
+      "element": "Footer / Email",
+      "expected": "Browser dispatched mailto:harshitteotia2003@gmail.com; OS mail client not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/",
+      "element": "Footer / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/",
+      "element": "Footer / GitHub",
+      "expected": "New tab requested https://github.com/HarshitTeotia; remote reachability not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/",
+      "element": "Footer / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/",
+      "element": "Footer / LinkedIn",
+      "expected": "New tab requested https://www.linkedin.com/in/harshit-teotia/; remote reachability not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/",
+      "element": "Footer / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/",
+      "element": "Footer / Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/",
+      "element": "Footer / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/",
+      "element": "Header / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/",
+      "element": "Header / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/",
+      "element": "Header / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/",
+      "element": "Header / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/",
+      "element": "Header / Harshit Teotia",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/",
+      "element": "Header / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/",
+      "element": "Header / Open menu",
+      "expected": "Open / close dialog, restore focus, unlock body",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/",
+      "element": "Header / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/",
+      "element": "Header / Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/",
+      "element": "Header / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/",
+      "element": "Layout / Skip to content",
+      "expected": "Scrolled to and focused #main-content",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/",
+      "element": "Main / View case study: HAUT: Hospitality Booking & Operations Platform",
+      "expected": "Opened /Portfolio/projects/haut/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/",
+      "element": "Main / View case study: MSME Lending & AI-Powered Loan Management Platform",
+      "expected": "Opened /Portfolio/projects/vrozart-finance/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/",
+      "element": "Main / View case study: Van Sales & Distribution ERP",
+      "expected": "Opened /Portfolio/projects/van-sales-distribution-erp/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/",
+      "element": "Main / View case study: Viblets",
+      "expected": "Opened /Portfolio/projects/viblets/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/",
+      "element": "Mobile navigation / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/",
+      "element": "Mobile navigation / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/",
+      "element": "Mobile navigation / Close menu",
+      "expected": "Open / close dialog, restore focus, unlock body",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/",
+      "element": "Mobile navigation / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/",
+      "element": "Mobile navigation / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/",
+      "element": "Mobile navigation / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/",
+      "element": "Mobile navigation / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/",
+      "element": "Mobile navigation / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/",
+      "element": "Mobile navigation / View Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Footer / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Footer / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Footer / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Footer / Email",
+      "expected": "Browser dispatched mailto:harshitteotia2003@gmail.com; OS mail client not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Footer / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Footer / GitHub",
+      "expected": "New tab requested https://github.com/HarshitTeotia; remote reachability not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Footer / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Footer / LinkedIn",
+      "expected": "New tab requested https://www.linkedin.com/in/harshit-teotia/; remote reachability not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Footer / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Footer / Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Footer / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Header / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Header / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Header / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Header / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Header / Harshit Teotia",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Header / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Header / Open menu",
+      "expected": "Open / close dialog, restore focus, unlock body",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Header / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Header / Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Header / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Layout / Skip to content",
+      "expected": "Scrolled to and focused #main-content",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Main / ← All projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Main / ← Previous case studyVan Sales & Distribution ERP",
+      "expected": "Opened /Portfolio/projects/van-sales-distribution-erp/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Main / Architecture",
+      "expected": "Scrolled to #architecture below sticky header",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Main / Contributions",
+      "expected": "Scrolled to #contributions below sticky header",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Main / Get in touch →",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Main / Next case study →Viblets",
+      "expected": "Opened /Portfolio/projects/viblets/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Main / Problem",
+      "expected": "Scrolled to #problem below sticky header",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Mobile navigation / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Mobile navigation / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Mobile navigation / Close menu",
+      "expected": "Open / close dialog, restore focus, unlock body",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Mobile navigation / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Mobile navigation / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Mobile navigation / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Mobile navigation / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Mobile navigation / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/haut/",
+      "element": "Mobile navigation / View Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Footer / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Footer / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Footer / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Footer / Email",
+      "expected": "Browser dispatched mailto:harshitteotia2003@gmail.com; OS mail client not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Footer / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Footer / GitHub",
+      "expected": "New tab requested https://github.com/HarshitTeotia; remote reachability not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Footer / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Footer / LinkedIn",
+      "expected": "New tab requested https://www.linkedin.com/in/harshit-teotia/; remote reachability not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Footer / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Footer / Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Footer / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Header / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Header / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Header / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Header / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Header / Harshit Teotia",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Header / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Header / Open menu",
+      "expected": "Open / close dialog, restore focus, unlock body",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Header / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Header / Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Header / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Layout / Skip to content",
+      "expected": "Scrolled to and focused #main-content",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Main / ← All projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Main / ← Previous case studyMSME Lending & AI-Powered Loan Management Platform",
+      "expected": "Opened /Portfolio/projects/vrozart-finance/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Main / Architecture",
+      "expected": "Scrolled to #architecture below sticky header",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Main / Contributions",
+      "expected": "Scrolled to #contributions below sticky header",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Main / Get in touch →",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Main / Next case study →HAUT: Hospitality Booking & Operations Platform",
+      "expected": "Opened /Portfolio/projects/haut/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Main / Problem",
+      "expected": "Scrolled to #problem below sticky header",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Mobile navigation / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Mobile navigation / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Mobile navigation / Close menu",
+      "expected": "Open / close dialog, restore focus, unlock body",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Mobile navigation / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Mobile navigation / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Mobile navigation / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Mobile navigation / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Mobile navigation / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/van-sales-distribution-erp/",
+      "element": "Mobile navigation / View Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Footer / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Footer / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Footer / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Footer / Email",
+      "expected": "Browser dispatched mailto:harshitteotia2003@gmail.com; OS mail client not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Footer / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Footer / GitHub",
+      "expected": "New tab requested https://github.com/HarshitTeotia; remote reachability not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Footer / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Footer / LinkedIn",
+      "expected": "New tab requested https://www.linkedin.com/in/harshit-teotia/; remote reachability not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Footer / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Footer / Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Footer / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Header / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Header / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Header / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Header / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Header / Harshit Teotia",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Header / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Header / Open menu",
+      "expected": "Open / close dialog, restore focus, unlock body",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Header / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Header / Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Header / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Layout / Skip to content",
+      "expected": "Scrolled to and focused #main-content",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Main / ← All projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Main / ← Previous case studyHAUT: Hospitality Booking & Operations Platform",
+      "expected": "Opened /Portfolio/projects/haut/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Main / Architecture",
+      "expected": "Scrolled to #architecture below sticky header",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Main / Contributions",
+      "expected": "Scrolled to #contributions below sticky header",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Main / Get in touch →",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Main / Problem",
+      "expected": "Scrolled to #problem below sticky header",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Mobile navigation / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Mobile navigation / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Mobile navigation / Close menu",
+      "expected": "Open / close dialog, restore focus, unlock body",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Mobile navigation / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Mobile navigation / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Mobile navigation / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Mobile navigation / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Mobile navigation / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/viblets/",
+      "element": "Mobile navigation / View Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Footer / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Footer / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Footer / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Footer / Email",
+      "expected": "Browser dispatched mailto:harshitteotia2003@gmail.com; OS mail client not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Footer / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Footer / GitHub",
+      "expected": "New tab requested https://github.com/HarshitTeotia; remote reachability not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Footer / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Footer / LinkedIn",
+      "expected": "New tab requested https://www.linkedin.com/in/harshit-teotia/; remote reachability not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Footer / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Footer / Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Footer / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Header / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Header / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Header / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Header / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Header / Harshit Teotia",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Header / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Header / Open menu",
+      "expected": "Open / close dialog, restore focus, unlock body",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Header / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Header / Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Header / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Layout / Skip to content",
+      "expected": "Scrolled to and focused #main-content",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Main / ← All case studies",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Main / ← All projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Main / Architecture",
+      "expected": "Scrolled to #architecture below sticky header",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Main / Contributions",
+      "expected": "Scrolled to #contributions below sticky header",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Main / Get in touch →",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Main / LLM investigation",
+      "expected": "Scrolled to #investigation below sticky header",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Main / Next case study →Van Sales & Distribution ERP",
+      "expected": "Opened /Portfolio/projects/van-sales-distribution-erp/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Main / Problem",
+      "expected": "Scrolled to #problem below sticky header",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Mobile navigation / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Mobile navigation / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Mobile navigation / Close menu",
+      "expected": "Open / close dialog, restore focus, unlock body",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Mobile navigation / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Mobile navigation / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Mobile navigation / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Mobile navigation / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Mobile navigation / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/projects/vrozart-finance/",
+      "element": "Mobile navigation / View Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/tech/",
+      "element": "Footer / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Footer / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Footer / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Footer / Email",
+      "expected": "Browser dispatched mailto:harshitteotia2003@gmail.com; OS mail client not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Footer / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Footer / GitHub",
+      "expected": "New tab requested https://github.com/HarshitTeotia; remote reachability not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Footer / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Footer / LinkedIn",
+      "expected": "New tab requested https://www.linkedin.com/in/harshit-teotia/; remote reachability not verified",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Footer / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Footer / Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Footer / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Header / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Header / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Header / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Header / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Header / Harshit Teotia",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Header / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Header / Open menu",
+      "expected": "Open / close dialog, restore focus, unlock body",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/tech/",
+      "element": "Header / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Header / Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Header / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Layout / Skip to content",
+      "expected": "Scrolled to and focused #main-content",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Main / HAUT: Hospitality Booking & Operations Platform",
+      "expected": "Opened /Portfolio/projects/haut/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Main / MSME Lending & AI-Powered Loan Management Platform",
+      "expected": "Opened /Portfolio/projects/vrozart-finance/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Main / Van Sales & Distribution ERP",
+      "expected": "Opened /Portfolio/projects/van-sales-distribution-erp/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Main / Viblets",
+      "expected": "Opened /Portfolio/projects/viblets/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Mobile navigation / About",
+      "expected": "Opened /Portfolio/about/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/tech/",
+      "element": "Mobile navigation / Career",
+      "expected": "Opened /Portfolio/episodes/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/tech/",
+      "element": "Mobile navigation / Close menu",
+      "expected": "Open / close dialog, restore focus, unlock body",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/tech/",
+      "element": "Mobile navigation / Contact",
+      "expected": "Opened /Portfolio/contact/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/tech/",
+      "element": "Mobile navigation / Experience",
+      "expected": "Opened /Portfolio/experience/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/tech/",
+      "element": "Mobile navigation / Home",
+      "expected": "Opened /Portfolio/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/tech/",
+      "element": "Mobile navigation / Projects",
+      "expected": "Opened /Portfolio/projects/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/tech/",
+      "element": "Mobile navigation / Technologies",
+      "expected": "Opened /Portfolio/tech/ with correct heading",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/tech/",
+      "element": "Mobile navigation / View Resume",
+      "expected": "Opened current PDF (HTTP 200, application/pdf, byte-for-byte match)",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / Alembic → Van Sales & Distribution ERP",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / AWS S3 → MSME Lending & AI-Powered Loan Management Platform",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / Celery → MSME Lending & AI-Powered Loan Management Platform",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / Embeddings → MSME Lending & AI-Powered Loan Management Platform",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / Facebook Business API → Viblets",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / FastAPI → HAUT: Hospitality Booking & Operations Platform",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / FastAPI → MSME Lending & AI-Powered Loan Management Platform",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / FastAPI → Van Sales & Distribution ERP",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / FastAPI → Viblets",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / Google ADK → MSME Lending & AI-Powered Loan Management Platform",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / Google ADK → Viblets",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / JWT → Van Sales & Distribution ERP",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / LLM Integration → MSME Lending & AI-Powered Loan Management Platform",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / LLM Integration → Viblets",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / PDFPlumber → MSME Lending & AI-Powered Loan Management Platform",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / PostgreSQL → HAUT: Hospitality Booking & Operations Platform",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / PostgreSQL → MSME Lending & AI-Powered Loan Management Platform",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / PostgreSQL → Van Sales & Distribution ERP",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / PostgreSQL → Viblets",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / Pydantic → HAUT: Hospitality Booking & Operations Platform",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / Pytest → Van Sales & Distribution ERP",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / Python → HAUT: Hospitality Booking & Operations Platform",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / Python → MSME Lending & AI-Powered Loan Management Platform",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / Python → Van Sales & Distribution ERP",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / Python → Viblets",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / Qdrant → MSME Lending & AI-Powered Loan Management Platform",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / RBAC → HAUT: Hospitality Booking & Operations Platform",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / RBAC → Van Sales & Distribution ERP",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / React → MSME Lending & AI-Powered Loan Management Platform",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / Redis → HAUT: Hospitality Booking & Operations Platform",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / REST APIs → HAUT: Hospitality Booking & Operations Platform",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / REST APIs → MSME Lending & AI-Powered Loan Management Platform",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / REST APIs → Van Sales & Distribution ERP",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / Retrieval-Augmented Generation → MSME Lending & AI-Powered Loan Management Platform",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / SQLAlchemy (async) → Van Sales & Distribution ERP",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Related projects / Tesseract OCR → MSME Lending & AI-Powered Loan Management Platform",
+      "expected": "Select technology, display documented connection, open correct case study",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Technology explorer / Alembic",
+      "expected": "Mouse, touch, Enter, Space, hover/focus preview, persistence, toggle, reset and Escape with correct project data",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Technology explorer / AWS S3",
+      "expected": "Mouse, touch, Enter, Space, hover/focus preview, persistence, toggle, reset and Escape with correct project data",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Technology explorer / Celery",
+      "expected": "Mouse, touch, Enter, Space, hover/focus preview, persistence, toggle, reset and Escape with correct project data",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Technology explorer / Embeddings",
+      "expected": "Mouse, touch, Enter, Space, hover/focus preview, persistence, toggle, reset and Escape with correct project data",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Technology explorer / Facebook Business API",
+      "expected": "Mouse, touch, Enter, Space, hover/focus preview, persistence, toggle, reset and Escape with correct project data",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Technology explorer / FastAPI",
+      "expected": "Mouse, touch, Enter, Space, hover/focus preview, persistence, toggle, reset and Escape with correct project data",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Technology explorer / Google ADK",
+      "expected": "Mouse, touch, Enter, Space, hover/focus preview, persistence, toggle, reset and Escape with correct project data",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Technology explorer / JWT",
+      "expected": "Mouse, touch, Enter, Space, hover/focus preview, persistence, toggle, reset and Escape with correct project data",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Technology explorer / LLM Integration",
+      "expected": "Mouse, touch, Enter, Space, hover/focus preview, persistence, toggle, reset and Escape with correct project data",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Technology explorer / PDFPlumber",
+      "expected": "Mouse, touch, Enter, Space, hover/focus preview, persistence, toggle, reset and Escape with correct project data",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Technology explorer / PostgreSQL",
+      "expected": "Mouse, touch, Enter, Space, hover/focus preview, persistence, toggle, reset and Escape with correct project data",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Technology explorer / Pydantic",
+      "expected": "Mouse, touch, Enter, Space, hover/focus preview, persistence, toggle, reset and Escape with correct project data",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Technology explorer / Pytest",
+      "expected": "Mouse, touch, Enter, Space, hover/focus preview, persistence, toggle, reset and Escape with correct project data",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Technology explorer / Python",
+      "expected": "Mouse, touch, Enter, Space, hover/focus preview, persistence, toggle, reset and Escape with correct project data",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Technology explorer / Qdrant",
+      "expected": "Mouse, touch, Enter, Space, hover/focus preview, persistence, toggle, reset and Escape with correct project data",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Technology explorer / RBAC",
+      "expected": "Mouse, touch, Enter, Space, hover/focus preview, persistence, toggle, reset and Escape with correct project data",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Technology explorer / React",
+      "expected": "Mouse, touch, Enter, Space, hover/focus preview, persistence, toggle, reset and Escape with correct project data",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Technology explorer / Redis",
+      "expected": "Mouse, touch, Enter, Space, hover/focus preview, persistence, toggle, reset and Escape with correct project data",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Technology explorer / Reset selection",
+      "expected": "Disabled at rest; clear every technology by mouse/touch; restore all four projects",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Technology explorer / REST APIs",
+      "expected": "Mouse, touch, Enter, Space, hover/focus preview, persistence, toggle, reset and Escape with correct project data",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Technology explorer / Retrieval-Augmented Generation",
+      "expected": "Mouse, touch, Enter, Space, hover/focus preview, persistence, toggle, reset and Escape with correct project data",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Technology explorer / SQLAlchemy (async)",
+      "expected": "Mouse, touch, Enter, Space, hover/focus preview, persistence, toggle, reset and Escape with correct project data",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    },
+    {
+      "page": "/tech/",
+      "element": "Technology explorer / Tesseract OCR",
+      "expected": "Mouse, touch, Enter, Space, hover/focus preview, persistence, toggle, reset and Escape with correct project data",
+      "result": "PASS",
+      "widths": [320, 375, 390, 768, 1024, 1440]
+    }
+  ]
+}

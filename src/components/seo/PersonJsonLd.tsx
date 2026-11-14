@@ -27,7 +27,7 @@ export function PersonJsonLd() {
         }
       : undefined,
     homeLocation: { "@type": "Place", name: site.location },
-    description: site.summary,
+    description: `${site.summary} ${site.opportunityLocation}. ${site.availabilityDetail}`,
     knowsAbout: [
       "Python",
       "FastAPI",

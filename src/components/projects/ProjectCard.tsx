@@ -18,7 +18,7 @@ export function ProjectCard({
   return (
     <article
       aria-labelledby={titleId}
-      className="group border-border-strong bg-bg-elevated/70 hover:border-accent-500/60 focus-within:border-accent-400 flex h-full min-w-0 flex-col rounded-lg border p-5 transition-colors sm:p-6"
+      className="group border-border-strong bg-bg-elevated/70 focus-within:border-accent-400 flex h-full min-w-0 flex-col rounded-lg border p-5 transition-colors sm:p-6"
     >
       <div className="flex items-center justify-between gap-3">
         <span className="text-accent-300 font-mono text-xs tracking-widest uppercase">

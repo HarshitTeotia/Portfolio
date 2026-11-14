@@ -6,7 +6,11 @@ export default defineConfig({
   expect: { timeout: 10_000 },
   fullyParallel: true,
   workers: 2,
-  reporter: [["list"], ["html", { open: "never" }]],
+  reporter: [
+    ["list"],
+    ["html", { open: "never" }],
+    ["json", { outputFile: "test-results/button-audit/playwright.json" }],
+  ],
   use: {
     baseURL: "http://127.0.0.1:4173/Portfolio/",
     browserName: "chromium",

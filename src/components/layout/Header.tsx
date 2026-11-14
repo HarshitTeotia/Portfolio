@@ -152,7 +152,7 @@ export function Header() {
               )}
             </nav>
             <p className="text-text-secondary mt-auto pt-8 text-sm">
-              {site.location} · Available to join immediately
+              {site.opportunityLocation} · Available to join immediately
             </p>
           </div>
         </Modal>

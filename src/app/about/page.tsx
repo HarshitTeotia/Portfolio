@@ -31,7 +31,7 @@ const photoReveal: Variants = {
 export const metadata = pageMetadata(
   "/about/",
   "About — Harshit Teotia",
-  "Python Backend Developer and AI & GenAI Engineer with 17 months of professional experience. Based in Bengaluru and available to join immediately."
+  `Python Backend Developer and AI & GenAI Engineer with 17 months of professional experience. Bengaluru preferred; open to opportunities across India. ${site.availabilityDetail}`
 );
 
 export default function AboutPage() {
@@ -125,7 +125,7 @@ export default function AboutPage() {
           {about.engineeringFocus.map((skill) => (
             <span
               key={skill}
-              className="border-border-strong text-text-secondary hover:border-accent-500/50 hover:bg-bg-elevated hover:text-text-primary duration-base ease-standard inline-flex items-center rounded-full border px-3.5 py-1.5 font-mono text-xs tracking-wide uppercase transition-colors"
+              className="border-border-strong text-text-secondary inline-flex items-center rounded-full border px-3.5 py-1.5 font-mono text-xs tracking-wide uppercase"
             >
               {skill}
             </span>
@@ -189,7 +189,10 @@ export default function AboutPage() {
       </Reveal>
 
       <Reveal delay={0.15} className="mt-12">
-        <Link href="/episodes" className="text-accent-300 hover:text-accent-400 text-sm">
+        <Link
+          href="/episodes"
+          className="text-accent-300 hover:text-accent-400 inline-flex min-h-11 items-center text-sm"
+        >
           See the full timeline →
         </Link>
       </Reveal>

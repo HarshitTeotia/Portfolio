@@ -10,7 +10,7 @@ import { cn } from "@/lib/cn";
 export const metadata = pageMetadata(
   "/contact/",
   "Contact — Harshit Teotia",
-  "Contact Harshit Teotia for Python backend and AI engineering opportunities. Bengaluru, India; available to join immediately and open to remote work."
+  `Contact Harshit Teotia for Python backend and AI engineering opportunities across India. ${site.availabilityDetail}`
 );
 
 export default function ContactPage() {
@@ -22,7 +22,7 @@ export default function ContactPage() {
         align="center"
         kicker="Contact"
         title="Let's build useful software."
-        description={`${site.location}. ${site.availabilityDetail}`}
+        description={`${site.opportunityLocation}. ${site.availabilityDetail}`}
       />
 
       <Reveal

@@ -14,7 +14,7 @@ export function ProjectLinksRow({ links }: { links: ProjectLinks }) {
           </Button>
         ) : (
           <span
-            className="border-border text-text-muted cursor-not-allowed rounded-md border px-5 py-2.5 text-sm"
+            className="text-text-muted text-sm"
             title={github.isPrivate ? "Private codebase" : "Link coming soon"}
           >
             {github.isPrivate ? "Private codebase" : `${github.label} — coming soon`}

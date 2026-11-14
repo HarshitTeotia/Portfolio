@@ -44,7 +44,7 @@ export default async function ProjectDetailPage(props: PageProps<"/projects/[slu
       <Reveal>
         <Link
           href="/projects"
-          className="text-text-secondary hover:text-text-primary text-sm"
+          className="text-text-secondary hover:text-text-primary inline-flex min-h-11 items-center text-sm"
         >
           ← All projects
         </Link>
